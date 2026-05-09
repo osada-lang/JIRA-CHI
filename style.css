@@ -414,3 +414,99 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     align-items: center;
     gap: 8px;
 }
+
+/* --- Comprehensive Responsive Adjustments (Smartphone) --- */
+@media (max-width: 768px) {
+    /* Header & Logo */
+    .header-inner {
+        height: 70px !important; /* Smaller header for mobile */
+    }
+    .logo img {
+        height: 50px !important; /* Smaller logo for mobile */
+    }
+    .hamburger-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Sections & Spacing */
+    .section-padding {
+        padding: 60px 0; /* Tighter padding for mobile */
+    }
+    .container {
+        padding: 0 20px;
+    }
+    
+    /* Typography */
+    .hero-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 25px;
+    }
+    .sub-hero-title {
+        font-size: 1.8rem !important;
+    }
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    /* Layout Components */
+    .contact-nav-global {
+        grid-template-columns: 1fr; /* Stack buttons vertically */
+    }
+    .contact-nav-item-global {
+        padding: 25px 15px;
+    }
+    .contact-nav-btn-global {
+        font-size: 1.1rem;
+        padding: 18px;
+    }
+
+    /* Portfolio Cards */
+    .portfolio-grid-new {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        gap: 25px;
+    }
+    .portfolio-img {
+        height: 180px;
+    }
+    
+    /* FAQ Specific (Ensuring mobile style) */
+    .faq-q-text {
+        font-size: 1.1rem !important;
+    }
+    .faq-q-box {
+        padding: 20px 20px 20px 45px !important;
+    }
+    .faq-q-icon {
+        left: -15px !important;
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    /* Footer Adjustments */
+    .footer-nav-horizontal {
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 0;
+    }
+    .footer-logo-center {
+        height: 60px !important;
+    }
+    .footer-address {
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+    
+    /* Page Top Button */
+    .page-top-btn {
+        right: 20px;
+        bottom: 20px;
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Glass Card inside detail pages */
+    .glass-card {
+        padding: 40px 20px !important;
+    }
+}
