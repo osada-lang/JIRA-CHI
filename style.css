@@ -1,11 +1,30 @@
-/* --- Global Background & Glass --- */
-body {
+/* --- Global Layout --- */
+
+/* --- Global Fixed Background & Overlay --- */
+.fixed-bg-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -10;
+  overflow: hidden;
+}
+.fixed-bg-image {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background-image: url("./hero_sunrise_final.png");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  background-color: var(--color-navy);
 }
+.fixed-bg-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(11, 19, 43, 0.4); /* Consistent dark filter */
+}
+
+/* --- Global Background & Glass --- */
+body { background-color: var(--color-navy); }
 
 /* Glassmorphism utility for sections */
 .glass-section {
@@ -110,7 +129,7 @@ header.site-header {
   background-position: center;
    /* Fixed background effect */
 }
-.hero-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+.hero-background { display: none; }
 
 
 
