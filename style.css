@@ -84,10 +84,23 @@ header.site-header {
 .hamburger-btn span { display: block; width: 34px; height: 2px; background-color: var(--color-navy); }
 
 /* --- Hero Sections --- */
+
 .hero {
-  height: 100vh; min-height: 800px; background-color: var(--color-navy);
+  height: 100vh; min-height: 800px; 
   position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  background-image: url("./hero_sunrise_final.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Fixed background effect */
 }
+.hero-background {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(11, 19, 43, 0.3); /* Dark overlay filter */
+  z-index: 1;
+}
+
+
 
 /* Sub Page Hero */
 .sub-hero {
@@ -121,24 +134,8 @@ header.site-header {
 
 /* --- Hero Placeholder --- */
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("./hero_sunrise_final.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  z-index: -1;
-}
-.hero-background::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(11, 19, 43, 0.3); /* Overlay to make text readable */
-}
+
+
 
 .hero-content { position: relative; z-index: 10; text-align: center; color: var(--color-white); max-width: 1000px; padding: 0 40px; }
 .hero-title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 40px; letter-spacing: -0.03em; }
