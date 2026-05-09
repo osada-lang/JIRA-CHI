@@ -1,0 +1,60 @@
+          <!-- FAQ Item 1 -->
+          <div class="faq-item">
+            <div class="faq-q-box">
+              <div class="faq-q-icon">Q</div>
+              <p class="faq-q-text">依頼の前に相談や見積もりをしてもらえますか？</p>
+            </div>
+            <div class="faq-a-row">
+              <div class="faq-a-icon">A</div>
+              <p class="faq-a-text">
+                はい、可能です。<br>
+                ご相談や見積もりは無料で承っております。<br>
+                内容をヒアリングのうえ、見積もりをご提案いたします。
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="faq-item">
+            <div class="faq-q-box">
+              <div class="faq-q-icon">Q</div>
+              <p class="faq-q-text">小規模な案件や一部業務のみの依頼もできますか？</p>
+            </div>
+            <div class="faq-a-row">
+              <div class="faq-a-icon">A</div>
+              <p class="faq-a-text">
+                はい、可能です。<br>
+                ソフトウェアテストの一部分のみ、または一時的な開発支援など、ご要望に応じて柔軟に対応いたします。お気軽にご相談ください。
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="faq-item">
+            <div class="faq-q-box">
+              <div class="faq-q-icon">Q</div>
+              <p class="faq-q-text">AI高速開発（Vibecoding）の品質は担保されますか？</p>
+            </div>
+            <div class="faq-a-row">
+              <div class="faq-a-icon">A</div>
+              <p class="faq-a-text">
+                ご安心ください。AIによる高速なコーディング後、弊社のテスト専門チームが日本品質の厳格な検証を行います。開発の「スピード」とテストの「確実性」を両立させるのがジラーチの強みです。
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="faq-item">
+            <div class="faq-q-box">
+              <div class="faq-q-icon">Q</div>
+              <p class="faq-q-text">海外拠点とのやり取りに不安があります。日本語で対応してもらえますか？</p>
+            </div>
+            <div class="faq-a-row">
+              <div class="faq-a-icon">A</div>
+              <p class="faq-a-text">
+                はい、可能です。<br>
+                海外拠点には、ベトナム人現地スタッフのほかに、日本人スタッフも常駐しております。<br>
+                オンライン打ち合わせの際は、ベトナム現地スタッフも同席可能です。
+              </p>
+            </div>
+          </div>
