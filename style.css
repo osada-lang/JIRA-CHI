@@ -316,3 +316,10 @@ footer .logo-footer { height: 80px; width: auto; }
 .contact-nav-btn-global:hover {
     background: var(--color-red);
 }
+
+.header-info-link:hover {
+    color: var(--color-red) !important;
+}
+.header-info-link:hover i {
+    color: var(--color-red) !important;
+}
