@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vivre-Card | 実績紹介 | 株式会社ジラーチ</title>
-  <link rel="icon" href="../jirachi_logo_transparent.png" type="image/png">
+  <link rel="icon" href="../favicon.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -34,8 +34,8 @@
         <div style="display:flex; align-items:center; gap:32px; margin-bottom:60px; flex-wrap:wrap;">
           <img src="../vivre_card_icon.png" alt="Vivre-Card" style="height:150px; width:150px; border-radius:35px; flex-shrink:0; object-fit:cover;">
           <div>
-            <h1 style="font-size:3rem; font-weight:900; margin-bottom:12px;">Vivre-Card</h1>
-            <p style="font-size:1.2rem; color:var(--color-text-sub); font-weight:700;">大切な情報を、スマートに一枚に。実用的なカード管理アプリ</p>
+            <h1 style="font-size:3rem; font-weight:900; margin-bottom:12px;">Vivre Card</h1>
+            <p style="font-size:1.2rem; color:var(--color-text-sub); font-weight:700;">方位と距離だけで出会う。新しい待ち合わせ体験</p>
           </div>
         </div>
 
@@ -44,11 +44,11 @@
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:60px; margin-bottom:80px;">
           <div>
             <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-red); padding-bottom:16px; margin-bottom:32px;">課題と解決策</h2>
-            <p style="font-size:1.1rem; line-height:2.2;">散らばりがちなデジタル情報や個人の記録を、物理的なカードのような直感的なUIで管理することを目指しました。必要な情報に最短でアクセスできるよう、検索性と一覧性を極限まで高めたインターフェースを構築しました。</p>
+            <p style="font-size:1.1rem; line-height:2.2;">目印のない広大な公園や、混雑する遊園地など、既存の地図アプリでは位置を特定しにくいシチュエーションでの待ち合わせを解決。あえて地図を表示せず「相手がどっちに、あと何メートル先にいるか」という直感的な情報のみに絞ることで、宝探しのようなワクワク感と確実な合流を両立させました。</p>
           </div>
           <div>
-            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-navy); padding-bottom:16px; margin-bottom:32px;">技術的特徴</h2>
-            <p style="font-size:1.1rem; line-height:2.2;">Capacitorを活用し、Android/iOS両対応のハイブリッドアプリとして開発。スプラッシュ画面の挙動やアニメーションの滑らかさにこだわり、ネイティブアプリに引けを取らない操作感を実現しています。セキュリティを考慮したデータ管理構造を採用しています。</p>
+            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-navy); padding-bottom:16px; margin-bottom:32px;">技術的挑戦</h2>
+            <p style="font-size:1.1rem; line-height:2.2;">待ち合わせ中にメッセージアプリで連絡を取り合ったり、暇つぶしにゲームをしたりすることを想定し、弊社初となる「バックグラウンド動作機能」を実装。アプリを閉じても信号が途切れない安定した接続環境を構築しました。また、コンパスの干渉を抑え、方位と距離の精度を極限まで高めるためのチューニングに注力しました。</p>
           </div>
         </div>
 
@@ -58,15 +58,21 @@
           
           <!-- QR Code Section -->
           <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-bottom:50px;">
-            <div style="width:120px; height:120px; background:#fff; border:2px dashed #ddd; border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:#aaa; flex-direction:column; gap:8px;"><i class="fa-solid fa-qrcode" style="font-size:1.5rem;"></i>QR (iOS)</div>
-            <div style="width:120px; height:120px; background:#fff; border:2px dashed #ddd; border-radius:15px; display:flex; align-items:center; justify-content:center; font-size:0.8rem; color:#aaa; flex-direction:column; gap:8px;"><i class="fa-solid fa-qrcode" style="font-size:1.5rem;"></i>QR (Android)</div>
+            <div style="text-align:center;">
+              <img src="../vivre_qr_ios.png" alt="iOS QR" style="width:140px; height:140px; background:#fff; padding:10px; border:1px solid #ddd; border-radius:15px; margin-bottom:8px;">
+              <p style="font-size:0.8rem; color:var(--color-text-sub);">iOS</p>
+            </div>
+            <div style="text-align:center;">
+              <img src="../vivre_qr_android.png" alt="Android QR" style="width:140px; height:140px; background:#fff; padding:10px; border:1px solid #ddd; border-radius:15px; margin-bottom:8px;">
+              <p style="font-size:0.8rem; color:var(--color-text-sub);">Android</p>
+            </div>
           </div>
 
           <!-- Store Buttons Section -->
           <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-bottom:60px;">
             
-            <div class="btn-cta" style="background:#000; color:#fff; padding:15px 30px; border-radius:10px; opacity:0.6; cursor:not-allowed;"><i class="fa-brands fa-apple"></i> App Store (Coming soon)</div>
-            <div class="btn-cta" style="background:#3DDC84; color:#fff; padding:15px 30px; border-radius:10px; opacity:0.6; cursor:not-allowed;"><i class="fa-brands fa-google-play"></i> Google Play (Coming soon)</div>
+            <a href="https://apps.apple.com/jp/app/vivre/id6765871870" target="_blank" class="btn-cta" style="background:#000; color:#fff; padding:15px 30px; border-radius:10px; text-decoration:none;"><i class="fa-brands fa-apple"></i> App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.jirachi.vivre&pcampaignid=web_share" target="_blank" class="btn-cta" style="background:#3DDC84; color:#fff; padding:15px 30px; border-radius:10px; text-decoration:none;"><i class="fa-brands fa-google-play"></i> Google Play</a>
         
           </div>
 

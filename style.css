@@ -519,7 +519,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     
     /* Hero Typography */
     .hero-title {
-        font-size: 2.2rem !important; /* Adjusted to middle ground (2.2rem) */
+        font-size: 2.0rem !important; /* Slightly reduced based on feedback */
         margin-bottom: 12px;
         line-height: 1.2;
     }
@@ -572,5 +572,19 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
     .footer-copyright {
         margin-top: 10px;
+    }
+    .glass-card {
+        padding: 25px !important; /* Reduced for mobile */
+        border-radius: 16px;
+    }
+    .service-grid-mobile {
+        grid-template-columns: 1fr !important; /* Force single column */
+        gap: 30px !important;
+    }
+    .service-image-mobile {
+        order: 1 !important; /* Ensure image is always top on mobile */
+    }
+    .service-text-mobile {
+        order: 2 !important;
     }
 }
