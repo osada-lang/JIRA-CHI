@@ -234,7 +234,14 @@ footer .logo-footer { height: 80px; width: auto; }
 }
 
 /* Footer Custom Layout (Old HP style) */
-.site-footer-new { background: #f8f9fa !important; border-top: 1px solid rgba(0,0,0,0.05); padding: 80px 0 40px; }
+.site-footer-new {
+  background-color: #f8f9fa !important;
+  padding: 80px 0 40px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 100;
+  color: var(--color-navy);
+}
 .footer-logo-center {
     height: 80px;
     display: block; margin: 0 auto 30px;
