@@ -260,17 +260,17 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* Logo Size Adjustments */
 .logo img {
-    height: 75px; /* Increased from 60px */
+    height: 90px; /* Increased from 60px */
 }
 .site-header {
     height: auto;
     padding: 10px 0;
 }
 .header-inner {
-    height: 90px; /* Adjust inner height to accommodate larger logo */
+    height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
 .footer-logo-center {
-    height: 110px; /* Increased from 80px */
+    height: 95px; /* Increased from 80px */
     margin-bottom: 25px;
 }
