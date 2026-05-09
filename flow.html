@@ -8,7 +8,95 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
-      </head>
+  <style>
+    .flow-timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 60px auto 0;
+      padding-left: 50px;
+    }
+    .flow-timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--color-red), var(--color-navy));
+      opacity: 0.2;
+    }
+    .flow-step {
+      position: relative;
+      margin-bottom: 80px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--color-navy);
+      transition: var(--transition);
+    }
+    .flow-step:hover {
+      transform: translateX(10px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    }
+    .flow-number {
+      position: absolute;
+      left: -65px;
+      top: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--color-navy);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.2rem;
+      border: 4px solid #f8fbff;
+      z-index: 2;
+    }
+    .flow-step:nth-child(even) .flow-number {
+      background: var(--color-red);
+    }
+    .flow-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .flow-desc {
+      font-size: 1.1rem;
+      line-height: 2;
+      color: var(--color-text-main);
+    }
+    .flow-img {
+      margin-top: 30px;
+      height: 200px;
+      background: #f0f4f8;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999;
+      font-size: 0.9rem;
+      overflow: hidden;
+    }
+    .flow-img img { width:100%; height:100%; object-fit:cover; opacity: 0.8; }
+
+    @media (max-width: 768px) {
+      .flow-timeline { padding-left: 30px; }
+      .flow-timeline::before { left: 0; }
+      .flow-number { left: -45px; width: 40px; height: 40px; font-size: 1rem; top: 20px; }
+      .flow-step { padding: 30px 20px; }
+      .flow-title { font-size: 1.4rem; }
+    }
+  </style>
+</head>
 <body>
     <header class="site-header">
       <div class="container-full header-inner">
@@ -22,117 +110,115 @@
       </div>
     </header>
     <div id="drawer-overlay" class="drawer-overlay"></div><div id="drawer-menu" class="drawer-menu"><div id="drawer-close" class="drawer-close">&times;</div><nav class="drawer-nav"><ul><li><a href="./index.html">ホーム</a></li><li><a href="./about.html">当社について</a></li><li><a href="./service.html">事業内容</a></li><li><a href="./portfolio.html">実績紹介</a></li><li><a href="./flow.html">ご利用の流れ</a></li><li><a href="./faq.html">よくある質問</a></li><li><a href="./privacy.html">プライバシーポリシー</a></li></ul></nav><div class="drawer-cta"><a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a><a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a></div></div>
+    
     <main style="padding-top: var(--header-height);">
-      <section class="sub-hero" style="background-image: url('');">
+      <section class="sub-hero" style="background-image: none; background-color: var(--color-navy);">
         <div class="sub-hero-overlay"></div>
-        <div class="sub-hero-content"><h1 class="sub-hero-title">ご利用の流れ</h1><p class="sub-hero-subtitle">SERVICE FLOW</p>
-          <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.9; color: #FFFFFF; font-weight: 700; letter-spacing: 0.05em;">【共同開発メモ：現行HP画像差し込み予定】</p></div>
+        <div class="sub-hero-content"><h1 class="sub-hero-title">ご利用の流れ</h1><p class="sub-hero-subtitle">FLOW</p></div>
       </section>
       <div class="breadcrumb-container"><div class="container"><nav class="breadcrumb"><a href="./index.html">ホーム</a> <span>/</span> ご利用の流れ</nav></div></div>
       
-      <section class="section-padding"><div class="container" style="max-width:1000px;">
-        
-        <div style="display:flex; flex-direction:column; gap:80px;">
+      <section class="section-padding" style="background-color: #f8fbff;">
+        <div class="container">
           
-          <!-- FLOW 01 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：お問い合わせ]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 01</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">お問い合わせ</h3>
-              <p style="color:var(--color-text-sub); line-height:2; margin-bottom:30px;">まずはお問い合わせフォームまたはお電話にてご連絡ください。<br>ご相談内容を確認のうえ、担当者より折り返しご案内いたします。</p>
-              <a href="./contact.html" class="btn-cta btn-contact" style="display:inline-block; padding:15px 40px; font-size:0.9rem; border-radius:0;">お問い合わせはこちら</a>
+          <div class="flow-timeline">
+            <!-- STEP 01 -->
+            <div class="flow-step">
+              <div class="flow-number">01</div>
+              <h3 class="flow-title"><i class="fa-solid fa-comments"></i> お問い合わせ</h3>
+              <p class="flow-desc">
+                まずはお問い合わせフォームまたはお電話にてご連絡ください。<br>
+                ご相談内容を確認のうえ、担当者より1営業日以内に折り返しご案内いたします。
+              </p>
+              <div style="margin-top:25px;">
+                <a href="./contact.html" class="btn-cta btn-contact" style="display:inline-block; width:auto; padding:15px 30px; border-radius:4px; font-size:0.9rem;">お問い合わせはこちら</a>
+              </div>
             </div>
-          </div>
 
-          <!-- FLOW 02 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：ヒアリング]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 02</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">ヒアリング</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">ご要望や課題を丁寧にお伺いします。<br>オンライン、対面のどちらにも対応可能でございます。<br>オンラインで実施する際は、必要に応じて現地スタッフの同席も可能でございます。</p>
+            <!-- STEP 02 -->
+            <div class="flow-step">
+              <div class="flow-number">02</div>
+              <h3 class="flow-title"><i class="fa-solid fa-clipboard-list"></i> ヒアリング</h3>
+              <p class="flow-desc">
+                お客様の課題やご要望を詳細にお伺いします。オンライン会議での実施を基本としておりますが、対面でのご相談も承ります。<br>
+                ベトナムオフショア活用をご検討の場合は、現地スタッフを交えた詳細なヒアリングも可能です。
+              </p>
             </div>
-          </div>
 
-          <!-- FLOW 03 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：ご提案]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 03</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">ご提案</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">ヒアリング内容をもとに、最適な開発体制・スケジュール・コストプランをご提案いたします。<br>必要に応じて、概要資料もご提示します。</p>
+            <!-- STEP 03 -->
+            <div class="flow-step">
+              <div class="flow-number">03</div>
+              <h3 class="flow-title"><i class="fa-solid fa-file-invoice-dollar"></i> ご提案・お見積り</h3>
+              <p class="flow-desc">
+                ヒアリング内容に基づき、最適な開発体制、スケジュール、お見積りをご提案します。<br>
+                AI高速開発と手動テストをいかに組み合わせ、コストと品質を最適化するかのプランを提示いたします。
+              </p>
             </div>
-          </div>
 
-          <!-- FLOW 04 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：ご契約]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 04</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">ご契約</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">お見積り・提案内容にご納得いただけましたら、正式なご契約となります。<br>契約内容や進行スケジュールなど、事前にしっかりとご説明いたします。</p>
+            <!-- STEP 04 -->
+            <div class="flow-step">
+              <div class="flow-number">04</div>
+              <h3 class="flow-title"><i class="fa-solid fa-file-signature"></i> ご契約</h3>
+              <p class="flow-desc">
+                ご提案内容にご納得いただけましたら、秘密保持契約（NDA）および業務委託契約を締結いたします。<br>
+                契約締結後、すみやかにプロジェクトチームを編成し、キックオフを行います。
+              </p>
             </div>
-          </div>
 
-          <!-- FLOW 05 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：業務開始]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 05</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">業務開始</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">ご契約内容に基づき、業務を開始します。<br>進捗状況は定期的に共有し、円滑なコミュニケーションで品質を確保します。</p>
+            <!-- STEP 05 -->
+            <div class="flow-step">
+              <div class="flow-number">05</div>
+              <h3 class="flow-title"><i class="fa-solid fa-laptop-code"></i> 開発・検証開始</h3>
+              <p class="flow-desc">
+                実業務を開始します。弊社の特徴であるAI高速開発と、テスト専門会社としての厳格な品質管理プロセスを回していきます。<br>
+                進捗報告会を定期的に開催し、透明性の高いプロジェクト運営をお約束します。
+              </p>
             </div>
-          </div>
 
-          <!-- FLOW 06 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：ご納品]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 06</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">満足いただいてご納品</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">最終成果物を納品後、内容をご確認いただきます。<br>ご満足いただけるまで丁寧にサポートし、継続的な改善・保守にも対応します。</p>
+            <!-- STEP 06 -->
+            <div class="flow-step">
+              <div class="flow-number">06</div>
+              <h3 class="flow-title"><i class="fa-solid fa-truck-ramp-box"></i> 検品・納品</h3>
+              <p class="flow-desc">
+                最終成果物の検品を行っていただきます。弊社の厳しいQA基準をクリアした状態で納品いたします。<br>
+                ご満足いただけるまで誠心誠意対応させていただきます。
+              </p>
             </div>
-          </div>
 
-          <!-- FLOW 07 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
-            <div class="img-placeholder" style="height:250px;">[イメージ：アフターサービス]</div>
-            <div>
-              <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 07</p>
-              <h3 style="font-size:1.8rem; margin-bottom:24px; color:var(--color-navy);">アフターサービス</h3>
-              <p style="color:var(--color-text-sub); line-height:2;">納品後も、システムの機能追加や運用における課題解決など、お客様のビジネスの成長に合わせて柔軟にサポートを継続いたします。</p>
+            <!-- STEP 07 -->
+            <div class="flow-step">
+              <div class="flow-number">07</div>
+              <h3 class="flow-title"><i class="fa-solid fa-hand-holding-heart"></i> アフターサポート</h3>
+              <p class="flow-desc">
+                納品後も、追加の機能改善や保守メンテナンスなど、お客様のビジネスの成長に合わせた継続的なサポートを提供いたします。
+              </p>
             </div>
           </div>
 
         </div>
-
-      </div></section>
+      </section>
     </main>
-    
-  <section class="global-contact-cta">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 40px;">
-        <p style="font-size: 0.9rem; letter-spacing: 0.2em; color: var(--color-text-sub); margin-bottom: 10px;">CONTACT</p>
-        <h2 style="font-size: 2rem; font-weight: 900; color: var(--color-navy);">お問い合わせ</h2>
-      </div>
-      <div class="contact-nav-global">
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">お電話でのご連絡はこちら</p>
-          <a href="tel:050-6868-9731" class="contact-nav-btn-global">
-            <i class="fa-solid fa-phone"></i> 050-6868-9731
-          </a>
+
+    <section class="global-contact-cta">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 40px;">
+          <p style="font-size: 0.9rem; letter-spacing: 0.2em; color: var(--color-text-sub); margin-bottom: 10px;">CONTACT</p>
+          <h2 style="font-size: 2rem; font-weight: 900; color: var(--color-navy);">お問い合わせ</h2>
         </div>
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">メールでのご連絡はこちら</p>
-          <a href="./contact.html" class="contact-nav-btn-global">
-            <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
-          </a>
+        <div class="contact-nav-global">
+          <div class="contact-nav-item-global">
+            <p class="contact-nav-label-global">お電話でのご連絡はこちら</p>
+            <a href="tel:050-6868-9731" class="contact-nav-btn-global"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+          </div>
+          <div class="contact-nav-item-global">
+            <p class="contact-nav-label-global">メールでのご連絡はこちら</p>
+            <a href="./contact.html" class="contact-nav-btn-global"><i class="fa-solid fa-envelope"></i> お問い合わせフォーム</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <footer class="site-footer-new"><div class="container"><img src="./jirachi_logo_transparent.png" alt="Logo" class="footer-logo-center"><div class="footer-address">〒４８５−０８２６<br>愛知県小牧市東田中６９３−１</div><hr class="footer-divider"><ul class="footer-nav-horizontal"><li><a href="./index.html">ホーム</a></li><li><a href="./about.html">当社について</a></li><li><a href="./service.html">事業内容</a></li><li><a href="./portfolio.html">実績紹介</a></li><li><a href="./flow.html">ご利用の流れ</a></li><li><a href="./faq.html">よくある質問</a></li><li><a href="./privacy.html">プライバシーポリシー</a></li><li><a href="./contact.html">お問い合わせ</a></li></ul><hr class="footer-divider"><div class="footer-copyright">© 2025 株式会社ジラーチ</div></div></footer><a href="#" class="page-top-btn"><i class="fa-solid fa-chevron-up"></i></a>
+    </section>
+
+    <footer class="site-footer-new"><div class="container"><img src="./jirachi_logo_transparent.png" alt="Logo" class="footer-logo-center"><div class="footer-address">〒４８５−０８２６<br>愛知県小牧市東田中６９３−１</div><hr class="footer-divider"><ul class="footer-nav-horizontal"><li><a href="./index.html">ホーム</a></li><li><a href="./about.html">当社について</a></li><li><a href="./service.html">事業内容</a></li><li><a href="./portfolio.html">実績紹介</a></li><li><a href="./flow.html">ご利用の流れ</a></li><li><a href="./faq.html">よくある質問</a></li><li><a href="./privacy.html">プライバシーポリシー</a></li><li><a href="./contact.html">お問い合わせ</a></li></ul><hr class="footer-divider"><div class="footer-copyright">© 2025 株式会社ジラーチ</div></div></footer><a href="#" class="page-top-btn"><i class="fa-solid fa-chevron-up"></i></a>
     <script src="./main.js"></script>
 </body>
 </html>
