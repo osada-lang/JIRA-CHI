@@ -512,23 +512,27 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
         margin-left: 5px;
     }
 
-    /* Sections & Spacing */
+    /* Global Typography Scaling for Mobile (Proportional to Hero) */
+    h2 { font-size: 1.9rem !important; line-height: 1.3 !important; margin-bottom: 20px !important; }
+    h3 { font-size: 1.25rem !important; }
+    p, li { font-size: 0.9rem !important; line-height: 1.6 !important; }
+    
     .section-padding {
-        padding: 40px 0; /* More compact spacing */
+        padding: 60px 0; /* More compact spacing */
     }
     
     /* Hero Typography */
     .hero-title {
-        font-size: 2.0rem !important; /* Slightly reduced based on feedback */
+        font-size: 2.0rem !important;
         margin-bottom: 12px;
         line-height: 1.2;
     }
     .hero-subtitle {
-        font-size: 0.9rem !important; /* Reduced to avoid unintended wrapping */
-        line-height: 1.6;
+        font-size: 0.85rem !important; /* Slightly more reduced to match global P */
+        line-height: 1.5;
     }
     .sub-hero-title {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
     }
 
     /* Drawer Menu (Fit in one screen) */
