@@ -464,8 +464,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
 
     /* Footer (Hide horizontal menu) */
-    .footer-nav-horizontal { display: flex; justify-content: center; gap: 25px; list-style: none; margin: 30px 0; flex-wrap: wrap; padding: 0; }
-    .footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
+    .footer-nav-horizontal { display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 30px !important; list-style: none !important; margin: 30px auto !important; padding: 0 !important; flex-wrap: wrap !important; max-width: 1000px; }
     .footer-address {
         font-size: 0.8rem;
         margin-bottom: 20px;
@@ -481,3 +480,4 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 
 .footer-nav-horizontal a { color: #333; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
 .footer-nav-horizontal a:hover { color: var(--color-red); }
+.footer-nav-horizontal li { margin: 0 !important; }
