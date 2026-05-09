@@ -415,98 +415,92 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     gap: 8px;
 }
 
-/* --- Comprehensive Responsive Adjustments (Smartphone) --- */
+
+/* --- Refined Mobile Adjustments (User Feedback) --- */
+
 @media (max-width: 768px) {
-    /* Header & Logo */
+    /* Header & Logo - Ultra Slim */
     .header-inner {
-        height: 70px !important; /* Smaller header for mobile */
+        height: 60px !important; /* Slimmer for better icon centering */
     }
     .logo img {
-        height: 50px !important; /* Smaller logo for mobile */
+        height: 40px !important; /* Balanced with header height */
+    }
+    .header-controls {
+        gap: 15px; /* Tighter gap for small screens */
+    }
+    .header-separator {
+        display: none;
+    }
+    /* Mobile-only Phone Icon (Hide text, show icon) */
+    .header-info-link {
+        display: flex !important;
+        font-size: 0 !important; /* Hide the text part */
+        padding: 5px;
+    }
+    .header-info-link i {
+        font-size: 1.4rem; /* Prominent phone icon */
     }
     .hamburger-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
+        margin-left: 5px;
     }
 
     /* Sections & Spacing */
     .section-padding {
-        padding: 60px 0; /* Tighter padding for mobile */
-    }
-    .container {
-        padding: 0 20px;
+        padding: 40px 0; /* More compact spacing */
     }
     
-    /* Typography */
+    /* Hero Typography */
     .hero-title {
-        font-size: 2.2rem !important;
-        margin-bottom: 25px;
+        font-size: 1.8rem !important; /* Prevent excessive wrapping */
+        margin-bottom: 20px;
     }
     .sub-hero-title {
-        font-size: 1.8rem !important;
-    }
-    .hero-content {
-        padding: 0 20px;
+        font-size: 1.6rem !important;
     }
 
-    /* Layout Components */
-    .contact-nav-global {
-        grid-template-columns: 1fr; /* Stack buttons vertically */
+    /* Drawer Menu (Fit in one screen) */
+    .drawer-menu {
+        padding: 60px 30px 40px; /* Reduced top padding */
     }
-    .contact-nav-item-global {
-        padding: 25px 15px;
+    .drawer-nav li {
+        margin-bottom: 12px; /* Much tighter gap */
     }
-    .contact-nav-btn-global {
-        font-size: 1.1rem;
-        padding: 18px;
+    .drawer-nav a {
+        font-size: 1.1rem; /* Smaller font to fit items */
     }
-
-    /* Portfolio Cards */
-    .portfolio-grid-new {
-        grid-template-columns: 1fr; /* Single column on mobile */
-        gap: 25px;
+    .drawer-cta {
+        margin-top: 30px;
+        gap: 10px;
     }
-    .portfolio-img {
-        height: 180px;
+    .btn-cta {
+        padding: 15px;
+        font-size: 1rem;
     }
-    
-    /* FAQ Specific (Ensuring mobile style) */
-    .faq-q-text {
-        font-size: 1.1rem !important;
-    }
-    .faq-q-box {
-        padding: 20px 20px 20px 45px !important;
-    }
-    .faq-q-icon {
-        left: -15px !important;
-        width: 36px !important;
-        height: 36px !important;
+    .drawer-close {
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
     }
 
-    /* Footer Adjustments */
+    /* Footer (Hide horizontal menu) */
     .footer-nav-horizontal {
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px 0;
+        display: none !important;
     }
     .footer-logo-center {
-        height: 60px !important;
+        height: 50px !important;
+        margin-bottom: 15px;
     }
     .footer-address {
-        font-size: 0.85rem;
-        margin-bottom: 30px;
+        font-size: 0.8rem;
+        margin-bottom: 20px;
     }
-    
-    /* Page Top Button */
-    .page-top-btn {
-        right: 20px;
-        bottom: 20px;
-        width: 44px;
-        height: 44px;
+    .footer-divider {
+        display: none; /* Simplify footer on mobile */
     }
-
-    /* Glass Card inside detail pages */
-    .glass-card {
-        padding: 40px 20px !important;
+    .footer-copyright {
+        margin-top: 10px;
     }
 }
