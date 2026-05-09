@@ -235,22 +235,90 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* Footer Custom Layout (Old HP style) */
 .site-footer-new {
-    background-color: #CFDCE1 !important;
+    background-color: #CFDCE1;
     color: #333;
     padding: 60px 0 40px;
     text-align: center;
 }
-.footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
+.footer-logo-center {
+    height: 80px;
+    display: block; margin: 0 auto 30px;
+}
+.footer-address {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #555;
+}
+.footer-divider {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+.footer-nav-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+.footer-nav-horizontal a {
+    color: #333;
+    text-decoration: none;
+    transition: var(--transition);
+}
+.footer-nav-horizontal a:hover {
+    color: var(--color-red);
+}
+.footer-copyright {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 30px;
+}
+
+/* Page Top Button */
+.page-top-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--color-navy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    text-decoration: none;
+    z-index: 100;
+    transition: var(--transition);
+    opacity: 0.8;
+}
+.page-top-btn:hover {
+    opacity: 1;
+    background: var(--color-red);
+}
+
+/* Logo Size Adjustments */
+.logo img {
+    height: 90px; /* Increased from 60px */
+}
 .site-header {
     height: auto;
     padding: 10px 0;
 }
 .header-inner {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.45) 100%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
     height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
-.footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
+.footer-logo-center {
+    height: 90px; /* Increased from 80px */
+    margin-bottom: 25px;
+}
 
 /* Global Contact CTA Section (above footer) */
 .global-contact-cta {
@@ -398,7 +466,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 @media (max-width: 768px) {
     /* Header & Logo - Ultra Slim */
     .header-inner {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.45) 100%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
         height: 60px !important; /* Slimmer for better icon centering */
     }
     .logo img {
@@ -464,7 +532,13 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
 
     /* Footer (Hide horizontal menu) */
-    .footer-nav-horizontal { display: flex !important; flex-direction: row !important; justify-content: center !important; align-items: center !important; gap: 30px !important; list-style: none !important; margin: 30px auto !important; padding: 0 !important; flex-wrap: wrap !important; max-width: 1000px; }
+    .footer-nav-horizontal {
+        display: none !important;
+    }
+    .footer-logo-center {
+        height: 50px !important;
+        margin-bottom: 15px;
+    }
     .footer-address {
         font-size: 0.8rem;
         margin-bottom: 20px;
@@ -476,8 +550,3 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
         margin-top: 10px;
     }
 }
-
-
-.footer-nav-horizontal a { color: #333; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
-.footer-nav-horizontal a:hover { color: var(--color-red); }
-.footer-nav-horizontal li { margin: 0 !important; }
