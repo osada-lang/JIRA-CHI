@@ -274,3 +274,45 @@ footer .logo-footer { height: 80px; width: auto; }
     height: 90px; /* Increased from 80px */
     margin-bottom: 25px;
 }
+
+/* Global Contact CTA Section (above footer) */
+.global-contact-cta {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+}
+.contact-nav-global {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    border: 1px solid #ddd;
+    background: white;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.contact-nav-item-global {
+    padding: 40px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+.contact-nav-label-global {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+.contact-nav-btn-global {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--color-navy);
+    color: white;
+    padding: 25px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+.contact-nav-btn-global:hover {
+    background: var(--color-red);
+}
