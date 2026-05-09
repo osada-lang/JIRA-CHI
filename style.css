@@ -333,7 +333,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 .btn-cta:hover, 
 .header-info-link:hover, 
 .nav-links a:hover, 
-.logo:hover, 
+
 .service-card:hover, 
 .portfolio-card:hover, 
 .contact-nav-btn-global:hover, 
@@ -347,9 +347,5 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     transform: translateY(-2px) scale(0.98);
 }
 
-.logo {
-    display: inline-block; /* Ensure transform works */
-}
-.logo:hover {
-    transform: translateY(-5px) !important;
-}
+
+
