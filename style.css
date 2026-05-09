@@ -139,7 +139,14 @@ header.site-header {
 }
 
 .hero-content { position: relative; z-index: 10; text-align: center; color: var(--color-white); max-width: 1000px; padding: 0 40px; }
-.hero-title { font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.4; margin-bottom: 30px; letter-spacing: 0.1em; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+.hero-title { font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.1; margin-bottom: 40px; letter-spacing: -0.03em; }
+
+/* --- Sections & Cards --- */
+.campaign-banner {
+  background: var(--color-red); color: white; padding: 32px; text-align: center;
+  margin-top: -60px; position: relative; z-index: 20; border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(230, 57, 70, 0.3);
+}
 
 .glass-card {
   background: var(--color-white); border: 2px solid var(--color-blue-light);
@@ -192,7 +199,8 @@ footer .logo-footer { height: 80px; width: auto; }
 }
 
 @media (max-width: 768px) {
-  .hero-title { font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.4; margin-bottom: 30px; letter-spacing: 0.1em; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+  .hero-title { font-size: 2.5rem; }
+  .sub-hero-title { font-size: 2.5rem; }
 }
 
 /* Footer Custom Layout (Old HP style) */
@@ -461,7 +469,10 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
     
     /* Hero Typography */
-    .hero-title { font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.4; margin-bottom: 30px; letter-spacing: 0.1em; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); }
+    .hero-title {
+        font-size: 1.8rem !important; /* Prevent excessive wrapping */
+        margin-bottom: 20px;
+    }
     .sub-hero-title {
         font-size: 1.6rem !important;
     }
