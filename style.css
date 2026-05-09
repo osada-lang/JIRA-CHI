@@ -240,7 +240,7 @@ footer .logo-footer { height: 80px; width: auto; }
     padding: 60px 0 40px;
     text-align: center;
 }
-.footer-logo-center { height: 80px; margin-bottom: 30px; }
+.footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
 .site-header {
     height: auto;
     padding: 10px 0;
@@ -250,7 +250,7 @@ footer .logo-footer { height: 80px; width: auto; }
     height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
-.footer-logo-center { height: 80px; margin-bottom: 30px; }
+.footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
 
 /* Global Contact CTA Section (above footer) */
 .global-contact-cta {
@@ -464,13 +464,8 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
 
     /* Footer (Hide horizontal menu) */
-    .footer-nav-horizontal {
-        display: none !important;
-    }
-    .footer-logo-center {
-        height: 50px !important;
-        margin-bottom: 15px;
-    }
+    .footer-nav-horizontal { display: flex; justify-content: center; gap: 25px; list-style: none; margin: 30px 0; flex-wrap: wrap; padding: 0; }
+    .footer-logo-center { height: 80px; display: block; margin: 0 auto 30px; }
     .footer-address {
         font-size: 0.8rem;
         margin-bottom: 20px;
@@ -483,3 +478,6 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
 }
 
+
+.footer-nav-horizontal a { color: #333; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
+.footer-nav-horizontal a:hover { color: var(--color-red); }
