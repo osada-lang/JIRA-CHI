@@ -9,9 +9,9 @@ body {
 
 /* Glassmorphism utility for sections */
 .glass-section {
-  background: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 /* --- Design Tokens & Base --- */
@@ -50,7 +50,7 @@ img { max-width: 100%; height: auto; display: block; }
 .container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
 .container-full { width: 100%; padding: 0 60px; } /* Increased padding for wide header */
 .section-padding { padding: 120px 0; } 
-.section-padding:not(.hero) { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.section-padding:not(.hero) { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
 .text-center { text-align: center; }
 .bg-sub { background-color: var(--color-blue-light); }
 
@@ -60,14 +60,14 @@ header.site-header {
   width: 100%;
   position: fixed;
   top: 0; left: 0; z-index: 1000;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.85) 100%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.65) 100%);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(11, 19, 43, 0.05);
   display: flex; align-items: center;
 }
 
 .header-inner {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.65) 100%) !important; display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo img { height: 60px; width: auto; }
 
 .header-controls {
@@ -164,7 +164,7 @@ header.site-header {
   box-shadow: 0 20px 40px rgba(230, 57, 70, 0.3);
 }
 
-.glass-card { background: rgba(255, 255, 255, 0.8) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+.glass-card { background: rgba(255, 255, 255, 0.6) !important; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
   background: var(--color-white); border: 2px solid var(--color-blue-light);
   border-radius: 24px; padding: 50px; transition: var(--transition);
 }
@@ -220,7 +220,7 @@ footer .logo-footer { height: 80px; width: auto; }
 }
 
 /* Footer Custom Layout (Old HP style) */
-.site-footer-new { background: rgba(207, 220, 225, 0.9) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+.site-footer-new { background: rgba(207, 220, 225, 0.9) !important; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
     background-color: #CFDCE1;
     color: #333;
     padding: 60px 0 40px;
@@ -297,7 +297,7 @@ footer .logo-footer { height: 80px; width: auto; }
     padding: 10px 0;
 }
 .header-inner {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.65) 100%) !important;
     height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
@@ -452,7 +452,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 @media (max-width: 768px) {
     /* Header & Logo - Ultra Slim */
     .header-inner {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.65) 100%) !important;
         height: 60px !important; /* Slimmer for better icon centering */
     }
     .logo img {
