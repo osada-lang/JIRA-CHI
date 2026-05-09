@@ -235,79 +235,12 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* Footer Custom Layout (Old HP style) */
 .site-footer-new {
-  background-color: #f8f9fa !important;
-  padding: 80px 0 40px;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  position: relative;
-  z-index: 100;
-  color: var(--color-navy);
-}
-.footer-logo-center {
-    height: 80px;
-    display: block; margin: 0 auto 30px;
-}
-.footer-address {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    color: #555;
-}
-.footer-divider {
-    border: none;
-    border-top: 1px solid #999;
-    margin: 20px auto;
-    max-width: 1000px;
-}
-.footer-nav-horizontal {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 10px 0;
-    font-size: 0.9rem;
-}
-.footer-nav-horizontal a {
+    background-color: #CFDCE1 !important;
     color: #333;
-    text-decoration: none;
-    transition: var(--transition);
+    padding: 60px 0 40px;
+    text-align: center;
 }
-.footer-nav-horizontal a:hover {
-    color: var(--color-red);
-}
-.footer-copyright {
-    font-size: 0.8rem;
-    color: #777;
-    margin-top: 30px;
-}
-
-/* Page Top Button */
-.page-top-btn {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--color-navy);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    text-decoration: none;
-    z-index: 100;
-    transition: var(--transition);
-    opacity: 0.8;
-}
-.page-top-btn:hover {
-    opacity: 1;
-    background: var(--color-red);
-}
-
-/* Logo Size Adjustments */
-.logo img {
-    height: 90px; /* Increased from 60px */
-}
+.footer-logo-center { height: 80px; margin-bottom: 30px; }
 .site-header {
     height: auto;
     padding: 10px 0;
@@ -317,10 +250,7 @@ footer .logo-footer { height: 80px; width: auto; }
     height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
-.footer-logo-center {
-    height: 90px; /* Increased from 80px */
-    margin-bottom: 25px;
-}
+.footer-logo-center { height: 80px; margin-bottom: 30px; }
 
 /* Global Contact CTA Section (above footer) */
 .global-contact-cta {
