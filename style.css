@@ -323,3 +323,26 @@ footer .logo-footer { height: 80px; width: auto; }
 .header-info-link:hover i {
     color: var(--color-red) !important;
 }
+
+/* "Piku" Micro-interaction for all interactive elements */
+a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Specific elements that should "jump" on hover */
+.btn-cta:hover, 
+.header-info-link:hover, 
+.nav-links a:hover, 
+.logo:hover, 
+.service-card:hover, 
+.portfolio-card:hover, 
+.contact-nav-btn-global:hover, 
+.page-top-btn:hover,
+.footer-nav-horizontal a:hover {
+    transform: translateY(-5px);
+}
+
+/* Subtle scaling for some elements */
+.btn-cta:active {
+    transform: translateY(-2px) scale(0.98);
+}
