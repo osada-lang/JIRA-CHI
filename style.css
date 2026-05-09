@@ -519,12 +519,12 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     
     /* Hero Typography */
     .hero-title {
-        font-size: 2.2rem !important; /* Re-increased since we have intentional breaks */
+        font-size: 1.8rem !important; /* Reduced to avoid unintended wrapping */
         margin-bottom: 15px;
         line-height: 1.3;
     }
     .hero-subtitle {
-        font-size: 1.1rem !important; /* Re-increased for readability */
+        font-size: 0.9rem !important; /* Reduced to avoid unintended wrapping */
         line-height: 1.6;
     }
     .sub-hero-title {
