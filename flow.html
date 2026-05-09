@@ -8,7 +8,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
-      </head>
+      
+  <style>
+    .flow-item-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+      padding: 40px;
+      border-radius: 0;
+      border: 1px solid #ddd;
+      background: #CFDCE1;
+      margin-bottom: 30px;
+      transition: var(--transition);
+    }
+    @media (max-width: 768px) {
+      .flow-item-card {
+        grid-template-columns: 1fr; /* Force vertical on mobile */
+        padding: 25px 20px;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .flow-item-card .img-placeholder {
+        height: 180px !important;
+      }
+      .flow-item-card h3 {
+        font-size: 1.4rem !important;
+        margin-bottom: 15px !important;
+      }
+      .flow-item-card p {
+        font-size: 0.95rem;
+        line-height: 1.8 !important;
+      }
+    }
+  </style>
+
+</head>
 <body>
     <header class="site-header">
       <div class="container-full header-inner">
@@ -35,7 +70,7 @@
         <div style="display:flex; flex-direction:column; gap:80px;">
           
           <!-- FLOW 01 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：お問い合わせ]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 01</p>
@@ -46,7 +81,7 @@
           </div>
 
           <!-- FLOW 02 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：ヒアリング]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 02</p>
@@ -56,7 +91,7 @@
           </div>
 
           <!-- FLOW 03 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：ご提案]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 03</p>
@@ -66,7 +101,7 @@
           </div>
 
           <!-- FLOW 04 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：ご契約]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 04</p>
@@ -76,7 +111,7 @@
           </div>
 
           <!-- FLOW 05 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：業務開始]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 05</p>
@@ -86,7 +121,7 @@
           </div>
 
           <!-- FLOW 06 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：ご納品]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 06</p>
@@ -96,7 +131,7 @@
           </div>
 
           <!-- FLOW 07 -->
-          <div class="glass-card" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:40px; align-items:center; padding:40px; border-radius:0; border:1px solid #ddd; background:#CFDCE1;">
+          <div class="flow-item-card">
             <div class="img-placeholder" style="height:250px;">[イメージ：アフターサービス]</div>
             <div>
               <p style="font-family:'Outfit'; font-size:1.1rem; color:var(--color-navy); margin-bottom:10px;">FLOW 07</p>
