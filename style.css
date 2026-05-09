@@ -537,10 +537,3 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
     }
 }
 
-/* --- Home Specific Glass CTA --- */
-
-.home-contact-cta {
-  background: rgba(255, 255, 255, 0.6) !important;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-}
