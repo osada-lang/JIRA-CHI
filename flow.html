@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ご利用の流れ | 株式会社ジラーチ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="site-header">
+      <div class="container-full header-inner">
+        <a href="./index.html" class="logo"><img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo"></a>
+        <div class="header-controls">
+          <a href="tel:050-6868-9731" class="header-info-link"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+          <div class="header-separator"></div>
+          <a href="./contact.html" class="header-info-link"><i class="fa-solid fa-envelope"></i> CONTACT</a>
+          <button id="hamburger-btn" class="hamburger-btn"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Drawer Menu -->
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <div id="drawer-menu" class="drawer-menu">
+      <div id="drawer-close" class="drawer-close">&times;</div>
+      <nav class="drawer-nav">
+        <ul>
+          <li><a href="./index.html">ホーム</a></li>
+          <li><a href="./about.html">当社について</a></li>
+          <li><a href="./service.html">事業内容</a></li>
+          <li><a href="./portfolio.html">実績紹介</a></li>
+          <li><a href="./flow.html">ご利用の流れ</a></li>
+          <li><a href="./faq.html">よくある質問</a></li>
+          <li><a href="./privacy.html">プライバシーポリシー</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-cta">
+        <a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+        <a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a>
+      </div>
+    </div>
+    
+    <main style="padding-top: var(--header-height);">
+      <section class="sub-hero" style="background-image: url('');">
+        <div class="sub-hero-overlay"></div>
+        <div class="sub-hero-content"><h1 class="sub-hero-title">ご利用の流れ</h1><p class="sub-hero-subtitle">FLOW</p></div>
+      </section>
+      <div class="breadcrumb-container"><div class="container"><nav class="breadcrumb"><a href="./index.html">ホーム</a> <span>/</span> ご利用の流れ</nav></div></div>
+      <section class="section-padding"><div class="container" style="max-width:1000px;">
+        <div style="display:flex; flex-direction:column; gap:80px;">
+          <div style="display:grid; grid-template-columns:100px 1fr; gap:40px; align-items:start;">
+            <div style="background:var(--color-navy); color:white; width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:900;">01</div>
+            <div><h3 style="font-size:1.8rem; margin-bottom:20px;">お問い合わせ</h3><p style="font-size:1.1rem; line-height:2; color:var(--color-text-main); margin-bottom:24px;">まずは、当ウェブサイトのお問い合わせフォーム、またはお電話（050-6868-9731）よりお気軽にご連絡ください。具体的に決まっていない段階でのご相談も大歓迎です。</p><div class="img-placeholder" style="height:250px;">[フロー説明画像：お問い合わせ対応の様子]</div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:100px 1fr; gap:40px; align-items:start;">
+            <div style="background:var(--color-navy); color:white; width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:900;">02</div>
+            <div><h3 style="font-size:1.8rem; margin-bottom:20px;">ヒアリング</h3><p style="font-size:1.1rem; line-height:2; color:var(--color-text-main); margin-bottom:24px;">担当者より、お客様の現在の課題、ご希望の納期、ご予算、目指すべきゴールなどを詳しくお伺いします。オンライン会議での実施も可能です。</p><div class="img-placeholder" style="height:250px;">[フロー説明画像：オンライン・対面でのヒアリング風景]</div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:100px 1fr; gap:40px; align-items:start;">
+            <div style="background:var(--color-navy); color:white; width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:900;">03</div>
+            <div><h3 style="font-size:1.8rem; margin-bottom:20px;">ご提案・お見積り</h3><p style="font-size:1.1rem; line-height:2; color:var(--color-text-main); margin-bottom:24px;">ヒアリング内容を基に、最適な開発体制や検証プラン、スケジュール、詳細なお見積りをご提示いたします。内容にご納得いただけましたら、ご契約となります。</p><div class="img-placeholder" style="height:250px;">[フロー説明画像：提案資料や契約プロセスのイメージ]</div></div>
+          </div>
+          <div style="display:grid; grid-template-columns:100px 1fr; gap:40px; align-items:start;">
+            <div style="background:var(--color-navy); color:white; width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; font-weight:900;">04</div>
+            <div><h3 style="font-size:1.8rem; margin-bottom:20px;">業務開始・納品</h3><p style="font-size:1.1rem; line-height:2; color:var(--color-text-main); margin-bottom:24px;">開発・検証チームが速やかに実業務を開始します。進捗は随時報告し、透明性の高いプロセスで進行。最終的な検品・テストを経て、高品質な成果物を納品いたします。</p><div class="img-placeholder" style="height:250px;">[フロー説明画像：開発現場、テスト実施、納品物のイメージ]</div></div>
+          </div>
+        </div>
+      </div></section>
+    </main>
+    <footer><div class="container"><div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:60px;"><div style="max-width:350px;"><img src="./jirachi_logo_transparent.png" alt="Logo" class="logo-footer" style="filter: brightness(0) invert(1);"><p style="margin-top:32px; font-size:0.95rem; color:rgba(255,255,255,0.7); line-height:2;">株式会社ジラーチ<br>愛知県小牧市東田中６９３−１<br>電話：050-6868-9731<br>メール：info@jira-chi.net</p></div><nav style="display:flex; gap:80px; flex-wrap:wrap;"><div><h4 style="margin-bottom:24px; letter-spacing:0.1em; color:var(--color-blue-light);">メニュー</h4><ul style="font-size:0.95rem; color:rgba(255,255,255,0.7); display:flex; flex-direction:column; gap:16px;"><li><a href="./index.html">ホーム</a></li><li><a href="./about.html">当社について</a></li><li><a href="./service.html">事業内容</a></li><li><a href="./portfolio.html">実績紹介</a></li></ul></div><div><h4 style="margin-bottom:24px; letter-spacing:0.1em; color:var(--color-blue-light);">サポート</h4><ul style="font-size:0.95rem; color:rgba(255,255,255,0.7); display:flex; flex-direction:column; gap:16px;"><li><a href="./flow.html">ご利用の流れ</a></li><li><a href="./faq.html">よくある質問</a></li><li><a href="./privacy.html">プライバシーポリシー</a></li><li><a href="./contact.html">お問い合わせ</a></li></ul></div></nav></div><div style="margin-top:80px; padding-top:40px; border-top:1px solid rgba(255,255,255,0.1); text-align:center; font-size:0.85rem; color:rgba(255,255,255,0.4);">&copy; 2024 JIRA-CHI Co., Ltd. All rights reserved.</div></div></footer>
+    <script src="./main.js"></script>
+</body>
+</html>
