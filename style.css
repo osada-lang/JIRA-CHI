@@ -49,7 +49,8 @@ header.site-header {
   display: flex; align-items: center;
 }
 
-.header-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.header-inner {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important; display: flex; justify-content: space-between; align-items: center; width: 100%; }
 .logo img { height: 60px; width: auto; }
 
 .header-controls {
@@ -267,6 +268,7 @@ footer .logo-footer { height: 80px; width: auto; }
     padding: 10px 0;
 }
 .header-inner {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
     height: 110px; /* Adjust inner height to accommodate larger logo */
 }
 
@@ -421,6 +423,7 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 @media (max-width: 768px) {
     /* Header & Logo - Ultra Slim */
     .header-inner {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.85) 100%) !important;
         height: 60px !important; /* Slimmer for better icon centering */
     }
     .logo img {
