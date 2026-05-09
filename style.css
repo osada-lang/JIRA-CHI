@@ -62,7 +62,7 @@ header.site-header {
   top: 0; left: 0; z-index: 1000;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.65) 100%);
   backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(11, 19, 43, 0.05);
+  border-bottom: none;
   display: flex; align-items: center;
 }
 
