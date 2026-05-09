@@ -346,3 +346,10 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
 .btn-cta:active {
     transform: translateY(-2px) scale(0.98);
 }
+
+.logo {
+    display: inline-block; /* Ensure transform works */
+}
+.logo:hover {
+    transform: translateY(-5px) !important;
+}
