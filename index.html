@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社ジラーチ | 圧倒的スピードと、揺るぎない品質。</title>
-  <link rel="icon" href="./favicon.jpg" type="image/jpeg">
+  <link rel="icon" href="./favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,7 +18,14 @@
 <body>
   <!-- Site-wide Fixed Background -->
   <div class="fixed-bg-container">
-    <div class="fixed-bg-image"></div>
+    <div class="fixed-bg-image">
+      <video id="hero-video-a" class="hero-video active" autoplay muted playsinline>
+        <source src="./background_loop.mp4" type="video/mp4">
+      </video>
+      <video id="hero-video-b" class="hero-video" muted playsinline>
+        <source src="./background_loop.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="fixed-bg-overlay"></div>
   </div>
 
@@ -83,13 +90,14 @@
         </p>
       </div>
     </section>
+    <div class="main-content-wrapper">
 
     <!-- Campaign Banner -->
     <div class="container">
-      <div class="campaign-banner fade-up" style="animation-delay: 0.4s">
-        <h2 style="font-size: 1.8rem; margin-bottom: 8px; font-weight: 900;">🚀 無料開発キャンペーン実施中</h2>
-        <p style="font-size: 1.1rem;">実績づくりのため、あなたのアイデアを無料で開発・公開します！お気軽にお問い合わせください。</p>
-      </div>
+      <a href="./campaign.html" class="campaign-banner fade-up" target="_blank" rel="noopener noreferrer" style="animation-delay: 0.4s; text-decoration: none; display: block;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 8px; font-weight: 900;">📱 スマホアプリ無料開発キャンペーン</h2>
+        <p style="font-size: 1.1rem;">あなたのアプリ案をジラーチが無料で形にします！実績公開につき初期・運用費0円。詳細はこちら</p>
+      </a>
     </div>
 
     <!-- Service Highlights -->
@@ -128,87 +136,83 @@
           </div>
         </div>
       </div>
+    <!-- Latest Projects -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;">
+          <h2 style="font-size: 3rem; font-weight: 900; color: var(--color-navy);">最新の実績</h2>
+          <p style="color: var(--color-text-sub); margin-top: 20px;">AI開発からWebサイト制作、自社アプリ開発まで多岐にわたる実績を紹介します。</p>
+        </div>
+
+        <div class="portfolio-grid-new"
+          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+          <!-- TAKE INTERNATIONAL -->
+          <a href="portfolio/take-international.html" class="portfolio-card">
+            <div class="portfolio-img"><img src="./take_international_thumb.png" alt="TAKE INTERNATIONAL"
+                style="width:100%; height:100%; object-fit:cover;"></div>
+            <div class="portfolio-info">
+              <p class="portfolio-category">コーポレートサイト</p>
+              <h3 class="portfolio-title">TAKE INTERNATIONAL</h3>
+              <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Leader Diagnosis -->
+          <a href="portfolio/leader-diagnosis.html" class="portfolio-card">
+            <div class="portfolio-img"><img src="./leader_diagnosis_thumb.png" alt="リーダー診断"
+                style="width:100%; height:100%; object-fit:cover;"></div>
+            <div class="portfolio-info">
+              <p class="portfolio-category">AI・診断システム</p>
+              <h3 class="portfolio-title">タイプ別リーダー診断</h3>
+              <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <!-- Smartphone App -->
+          <a href="portfolio/nekozoroe.html" class="portfolio-card">
+            <div class="portfolio-img" style="display:flex; align-items:center; justify-content:center; background:#eee;">
+              <img src="./nekozoroe_icon.png" alt="ねこぞろえ" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="portfolio-info">
+              <p class="portfolio-category">スマホアプリ</p>
+              <h3 class="portfolio-title">ねこぞろえ</h3>
+              <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-center" style="margin-top: 60px;">
+          <a href="./portfolio.html" class="btn-cta btn-contact"
+            style="display:inline-block; text-decoration:none;">実績一覧をもっと見る</a>
+        </div>
+      </div>
     </section>
+
+    <section class="global-contact-cta">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 40px;">
+          <p style="font-size: 0.9rem; letter-spacing: 0.2em; color: var(--color-text-sub); margin-bottom: 10px;">CONTACT
+          </p>
+          <h2 style="font-size: 2rem; font-weight: 900; color: var(--color-navy);">お問い合わせ</h2>
+        </div>
+        <div class="contact-nav-global">
+          <div class="contact-nav-item-global">
+            <p class="contact-nav-label-global">お電話でのご連絡はこちら</p>
+            <a href="tel:050-6868-9731" class="contact-nav-btn-global">
+              <i class="fa-solid fa-phone"></i> 050-6868-9731
+            </a>
+          </div>
+          <div class="contact-nav-item-global">
+            <p class="contact-nav-label-global">メールでのご連絡はこちら</p>
+            <a href="./contact.html" class="contact-nav-btn-global">
+              <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
   </main>
-
-
-
-
-  <!-- Latest Projects -->
-  <section class="section-padding">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 60px;">
-        <h2 style="font-size: 3rem; font-weight: 900; color: var(--color-navy);">最新の実績</h2>
-        <p style="color: var(--color-text-sub); margin-top: 20px;">AI開発からWebサイト制作、自社アプリ開発まで多岐にわたる実績を紹介します。</p>
-      </div>
-
-      <div class="portfolio-grid-new"
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
-        <!-- TAKE INTERNATIONAL -->
-        <a href="portfolio/take-international.html" class="portfolio-card">
-          <div class="portfolio-img"><img src="./take_international_thumb.png" alt="TAKE INTERNATIONAL"
-              style="width:100%; height:100%; object-fit:cover;"></div>
-          <div class="portfolio-info">
-            <p class="portfolio-category">コーポレートサイト</p>
-            <h3 class="portfolio-title">TAKE INTERNATIONAL</h3>
-            <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <!-- Leader Diagnosis -->
-        <a href="portfolio/leader-diagnosis.html" class="portfolio-card">
-          <div class="portfolio-img"><img src="./leader_diagnosis_thumb.png" alt="リーダー診断"
-              style="width:100%; height:100%; object-fit:cover;"></div>
-          <div class="portfolio-info">
-            <p class="portfolio-category">AI・診断システム</p>
-            <h3 class="portfolio-title">タイプ別リーダー診断</h3>
-            <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-
-        <!-- Smartphone App -->
-        <a href="portfolio/nekozoroe.html" class="portfolio-card">
-          <div class="portfolio-img" style="display:flex; align-items:center; justify-content:center; background:#eee;">
-            <img src="./nekozoroe_icon.png" alt="ねこぞろえ" style="width:100%; height:100%; object-fit:cover;">
-          </div>
-          <div class="portfolio-info">
-            <p class="portfolio-category">スマホアプリ</p>
-            <h3 class="portfolio-title">ねこぞろえ</h3>
-            <span class="portfolio-link">VIEW DETAILS <i class="fa-solid fa-arrow-right"></i></span>
-          </div>
-        </a>
-      </div>
-
-      <div class="text-center" style="margin-top: 60px;">
-        <a href="./portfolio.html" class="btn-cta btn-contact"
-          style="display:inline-block; text-decoration:none;">実績一覧をもっと見る</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="global-contact-cta">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 40px;">
-        <p style="font-size: 0.9rem; letter-spacing: 0.2em; color: var(--color-text-sub); margin-bottom: 10px;">CONTACT
-        </p>
-        <h2 style="font-size: 2rem; font-weight: 900; color: var(--color-navy);">お問い合わせ</h2>
-      </div>
-      <div class="contact-nav-global">
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">お電話でのご連絡はこちら</p>
-          <a href="tel:050-6868-9731" class="contact-nav-btn-global">
-            <i class="fa-solid fa-phone"></i> 050-6868-9731
-          </a>
-        </div>
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">メールでのご連絡はこちら</p>
-          <a href="./contact.html" class="contact-nav-btn-global">
-            <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
   <footer class="site-footer-new">
     <div class="container">
       <img src="./jirachi_logo_transparent.png" alt="Logo" class="footer-logo-center">

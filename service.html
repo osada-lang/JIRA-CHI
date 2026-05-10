@@ -1,146 +1,152 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>事業内容 | 株式会社ジラーチ</title>
-  <link rel="icon" href="./favicon.jpg" type="image/jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
-      </head>
+</head>
+
 <body>
-    <header class="site-header">
-      <div class="container-full header-inner">
-        <a href="./index.html" class="logo">
-          <img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container-full header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo">
+      </a>
+      <div class="header-controls">
+        <a href="tel:050-6868-9731" class="header-info-link">
+          <i class="fa-solid fa-phone"></i> 050-6868-9731
         </a>
-        <div class="header-controls">
-          <a href="tel:050-6868-9731" class="header-info-link">
-            <i class="fa-solid fa-phone"></i> 050-6868-9731
-          </a>
-          <div class="header-separator"></div>
-          <a href="./contact.html" class="header-info-link">
-            <i class="fa-solid fa-envelope"></i> CONTACT
-          </a>
-          <button id="hamburger-btn" class="hamburger-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <!-- Drawer Menu -->
-    <div id="drawer-overlay" class="drawer-overlay"></div>
-    <div id="drawer-menu" class="drawer-menu">
-      <div id="drawer-close" class="drawer-close">&times;</div>
-      <nav class="drawer-nav">
-        <ul>
-          <li><a href="./index.html">ホーム</a></li>
-          <li><a href="./about.html">当社について</a></li>
-          <li><a href="./service.html">事業内容</a></li>
-          <li><a href="./portfolio.html">実績紹介</a></li>
-          <li><a href="./flow.html">ご利用の流れ</a></li>
-          <li><a href="./faq.html">よくある質問</a></li>
-          <li><a href="./privacy.html">プライバシーポリシー</a></li>
-        </ul>
-      </nav>
-      <div class="drawer-cta">
-        <a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
-        <a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a>
+        <div class="header-separator"></div>
+        <a href="./contact.html" class="header-info-link">
+          <i class="fa-solid fa-envelope"></i> CONTACT
+        </a>
+        <button id="hamburger-btn" class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
-    <main style="padding-top: var(--header-height);">
-      <section class="sub-hero" style="background-image: url('./hero_v2.png');">
-        <div class="sub-hero-overlay"></div>
-        <div class="sub-hero-content">
-          <h1 class="sub-hero-title">事業内容</h1>
-          <p class="sub-hero-subtitle">SERVICE</p>
-          <p style="margin-top: 15px; font-size: 0.85rem; opacity: 0.9; color: #FFFFFF; font-weight: 700; letter-spacing: 0.05em;">【共同開発メモ：現行HP画像差し込み予定】</p>
-        </div>
-      </section>
-      <div class="breadcrumb-container">
-        <div class="container">
-          <nav class="breadcrumb">
-            <a href="./index.html">ホーム</a> <span>/</span> 事業内容
-          </nav>
-        </div>
-      </div>
-    <section class="section-padding"><div class="container">
-      <div style="max-width:900px; margin:0 auto 100px; text-align:center;">
-        <h2 style="font-size:2.5rem; font-weight:900; margin-bottom:32px;">事業間の強力なシナジー</h2>
-        <p style="font-size:1.2rem; line-height:2.2; color:var(--color-text-main);">ジラーチの事業（テスト・開発・進出支援）は、それぞれが独立しているのではなく、互いに深く連携しています。ソフトウェアテストで培った「品質への知見」をAI高速開発に注入し、その開発力をもってベトナム現地でのビジネスを技術的に支える。この循環があるからこそ、お客様に唯一無二の価値を提供できるのです。</p>
-      </div>
+  </header>
 
-      <div id="qa" class="glass-card" style="margin-bottom:60px;">
-        <div class="service-grid-mobile" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:60px; align-items:center;">
-          <div class="service-image-mobile">
-            <div class="img-placeholder" style="height:250px; overflow: hidden; border-radius: 16px;">
-              <img src="./service_qa.png" alt="ソフトウェアテスト / QA" style="width: 100%; height: 100%; object-fit: cover;">
+  <!-- Drawer Menu -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <div id="drawer-menu" class="drawer-menu">
+    <div id="drawer-close" class="drawer-close">&times;</div>
+    <nav class="drawer-nav">
+      <ul>
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./about.html">当社について</a></li>
+        <li><a href="./service.html">事業内容</a></li>
+        <li><a href="./portfolio.html">実績紹介</a></li>
+        <li><a href="./flow.html">ご利用の流れ</a></li>
+        <li><a href="./faq.html">よくある質問</a></li>
+        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-cta">
+      <a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+      <a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--header-height);">
+    <!-- Sub Page Hero -->
+    <section class="sub-hero" style="background-image: url('./portfolio_main_visual.png');">
+      <div class="sub-hero-overlay"></div>
+      <div class="sub-hero-content">
+        <h1 class="sub-hero-title">事業内容</h1>
+        <p class="sub-hero-subtitle">SERVICE</p>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="./index.html">ホーム</a> <span>/</span> 事業内容
+        </nav>
+      </div>
+    </div>
+
+    <section class="section-padding">
+      <div class="container">
+        <div style="max-width:900px; margin:0 auto 100px; text-align:center;">
+          <h2 style="font-size:2.5rem; font-weight:900; margin-bottom:32px; color: var(--color-navy);">
+            アプリの成功を加速させる、<br class="pc-only">
+            3つのコア・ソリューション
+          </h2>
+          <p style="font-size:1.2rem; line-height:2.2; color:var(--color-text-main);">
+            ジラーチの事業（品質保証・AI開発・オフショア）は、すべてが「高品質なアプリを最速で世に送る」ために最適化されています。それぞれの専門性が深く連携し、お客様のアイデアを揺るぎないビジネス資産へと変貌させます。
+          </p>
+        </div>
+
+        <!-- 01: QA -->
+        <div id="qa" class="glass-card" style="margin-bottom:80px; padding: 60px;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:60px; align-items:center;">
+            <div>
+              <div style="font-family: 'Outfit'; font-size: 1.2rem; color: var(--color-red); font-weight: 900; margin-bottom: 10px;">01. QUALITY ASSURANCE</div>
+              <h2 style="font-size:2.2rem; font-weight:900; margin-bottom:24px; color: var(--color-navy);">ソフトウェアテスト / QA</h2>
+              <h4 style="font-size: 1.2rem; color: var(--color-red); margin-bottom: 20px; font-weight: 700;">「日本基準」の品質で、アプリの信頼を担保する。</h4>
+              <p style="font-size:1.1rem; line-height:2; color: var(--color-text-main);">
+                第三者検証の専門家として、ユーザーがストレスなく利用できる「壊れないアプリ」を実現します。数千台規模の端末テストや、AIが検知できない「使い勝手」の検証まで、日本基準の厳格な品質管理プロセスをすべての工程に適用します。
+              </p>
+            </div>
+            <div style="background: #f0f4f8; border-radius: 20px; padding: 40px; text-align: center;">
+              <i class="fa-solid fa-list-check" style="font-size: 8rem; color: var(--color-navy); opacity: 0.8;"></i>
             </div>
           </div>
-          <div class="service-text-mobile">
-            <h2 style="font-size:2rem; font-weight:900; margin-bottom:24px; border-bottom:4px solid var(--color-red); display:inline-block;">ソフトウェアテスト / QA</h2>
-            <p style="font-size:1.1rem; line-height:2;">第三者検証のプロフェッショナルとして、日本品質の徹底したテストを提供。モバイルアプリから大規模システムまで、バグの早期発見だけでなく、ユーザー体験を損なわない品質向上をトータルに提案します。ジラーチの根幹を支える誠実なサービスです。</p>
-          </div>
         </div>
-      </div>
 
-      <div id="ai" class="glass-card" style="margin-bottom:60px; background-color:var(--color-blue-light);">
-        <div class="service-grid-mobile" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:60px; align-items:center;">
-          <div class="service-text-mobile" style="order:2;">
-            <h2 style="font-size:2rem; font-weight:900; margin-bottom:24px; border-bottom:4px solid var(--color-navy); display:inline-block;">AI高速開発 (Vibecoding)</h2>
-            <p style="font-size:1.1rem; line-height:2;">生成AIを極限まで活用し、従来の数倍のスピードで開発を完遂。「アイデアをすぐに形にしたい」という要望に、圧倒的な短納期と低コストで応えます。スピード重視の開発においても、弊社のテスト知見による厳格な品質チェックが伴うため、安心してお任せいただけます。</p>
-          </div>
-          <div class="service-image-mobile" style="order:1;">
-            <div class="img-placeholder" style="height:250px; background-color:white; overflow: hidden; border-radius: 16px;">
-              <img src="./service_ai.png" alt="AI高速開発" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 02: AI -->
+        <div id="ai" class="glass-card" style="margin-bottom:80px; padding: 60px; background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(209,224,229,0.5)) !important;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:60px; align-items:center;">
+            <div style="order: 2;">
+              <div style="font-family: 'Outfit'; font-size: 1.2rem; color: var(--color-navy); font-weight: 900; margin-bottom: 10px;">02. AI-DRIVEN DEVELOPMENT</div>
+              <h2 style="font-size:2.2rem; font-weight:900; margin-bottom:24px; color: var(--color-navy);">AI高速開発 (Vibecoding)</h2>
+              <h4 style="font-size: 1.2rem; color: var(--color-navy); margin-bottom: 20px; font-weight: 700;">アイデアが冷める前に、最速でストアへ。</h4>
+              <p style="font-size:1.1rem; line-height:2; color: var(--color-text-main);">
+                最新の生成AIを開発工程にフル活用する「Vibecoding」により、従来の数倍のスピードでアプリケーションを構築。単なる自動化ではなく、人間の創造性とAIの効率を融合させることで、短期間での市場投入（Time to Market）を可能にします。
+              </p>
+            </div>
+            <div style="order: 1; background: white; border-radius: 20px; padding: 40px; text-align: center;">
+              <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 8rem; color: var(--color-red); opacity: 0.8;"></i>
             </div>
           </div>
         </div>
-      </div>
 
-      <div id="offshore" class="glass-card">
-        <div class="service-grid-mobile" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:60px; align-items:center;">
-          <div class="service-image-mobile">
-            <div class="img-placeholder" style="height:250px; overflow: hidden; border-radius: 16px;">
-              <img src="./service_offshore.png" alt="オフショア開発" style="width: 100%; height: 100%; object-fit: cover;">
+        <!-- 03: Offshore -->
+        <div id="offshore" class="glass-card" style="padding: 60px;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:60px; align-items:center;">
+            <div>
+              <div style="font-family: 'Outfit'; font-size: 1.2rem; color: var(--color-red); font-weight: 900; margin-bottom: 10px;">03. GLOBAL BRIDGE</div>
+              <h2 style="font-size:2.2rem; font-weight:900; margin-bottom:24px; color: var(--color-navy);">オフショア開発・進出支援</h2>
+              <h4 style="font-size: 1.2rem; color: var(--color-red); margin-bottom: 20px; font-weight: 700;">ベトナムの機動力と、日本のマネジメント。</h4>
+              <p style="font-size:1.1rem; line-height:2; color: var(--color-text-main);">
+                ベトナム・ホーチミン拠点を活用し、高品質かつコストパフォーマンスに優れた開発体制を提供します。単なるアウトソーシングではなく、現地での法人設立や運営サポートまで行う「伴走型」の支援で、お客様のグローバルな挑戦を技術と体制の両面から支えます。
+              </p>
+            </div>
+            <div style="background: #f0f4f8; border-radius: 20px; padding: 40px; text-align: center;">
+              <i class="fa-solid fa-earth-asia" style="font-size: 8rem; color: var(--color-navy); opacity: 0.8;"></i>
             </div>
           </div>
-          <div class="service-text-mobile">
-            <h2 style="font-size:2rem; font-weight:900; margin-bottom:24px; border-bottom:4px solid var(--color-blue-light); display:inline-block;">オフショア開発・進出支援</h2>
-            <p style="font-size:1.1rem; line-height:2;">ベトナム・ホーチミン拠点を活かし、高品質な開発リソースを提供。法人設立登記からオフィス選定、採用、経理代行まで、現地でのビジネス展開をワンストップでサポートします。日本品質とベトナムの活力をつなぐ架け橋となります。</p>
-          </div>
         </div>
+
       </div>
-    </div></section>
+    </section>
   </main>
-  
-  
-  <section class="global-contact-cta">
-    <div class="container">
-      <div class="text-center" style="margin-bottom: 40px;">
-        <p style="font-size: 0.9rem; letter-spacing: 0.2em; color: var(--color-text-sub); margin-bottom: 10px;">CONTACT</p>
-        <h2 style="font-size: 2rem; font-weight: 900; color: var(--color-navy);">お問い合わせ</h2>
-      </div>
-      <div class="contact-nav-global">
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">お電話でのご連絡はこちら</p>
-          <a href="tel:050-6868-9731" class="contact-nav-btn-global">
-            <i class="fa-solid fa-phone"></i> 050-6868-9731
-          </a>
-        </div>
-        <div class="contact-nav-item-global">
-          <p class="contact-nav-label-global">メールでのご連絡はこちら</p>
-          <a href="./contact.html" class="contact-nav-btn-global">
-            <i class="fa-solid fa-envelope"></i> お問い合わせフォーム
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <!-- Footer -->
   <footer class="site-footer-new">
     <div class="container">
       <img src="./jirachi_logo_transparent.png" alt="Logo" class="footer-logo-center">
@@ -148,7 +154,6 @@
         〒４８５−０８２６<br>愛知県小牧市東田中６９３−１
       </div>
       <hr class="footer-divider">
-      
       <ul class="footer-nav-horizontal">
         <li><a href="./index.html">ホーム</a></li>
         <li><a href="./about.html">当社について</a></li>
@@ -159,15 +164,14 @@
         <li><a href="./privacy.html">プライバシーポリシー</a></li>
         <li><a href="./contact.html">お問い合わせ</a></li>
       </ul>
-
       <hr class="footer-divider">
       <div class="footer-copyright">
         © 2025 株式会社ジラーチ
       </div>
     </div>
   </footer>
-  <a href="#" class="page-top-btn"><i class="fa-solid fa-chevron-up"></i></a>
 
   <script src="./main.js"></script>
 </body>
+
 </html>

@@ -19,15 +19,26 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url("./hero_sunrise_final.png");
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+.fixed-bg-image video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+  transition: opacity 2.8s ease-in-out;
+}
+.fixed-bg-image video.active {
+  opacity: 1;
 }
 .fixed-bg-overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(11, 19, 43, 0.6); /* Slightly darker for better contrast */
+  background: rgba(11, 19, 43, 0.35);
 }
 
 /* --- Global Background & Glass --- */
@@ -81,7 +92,15 @@ img { max-width: 100%; height: auto; display: block; }
 .container { max-width: 1300px; margin: 0 auto; padding: 0 40px; }
 .container-full { width: 100%; padding: 0 60px; } /* Increased padding for wide header */
 .section-padding { padding: 120px 0; } 
-.section-padding:not(.hero) { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); }
+.section-padding:not(.hero) { background: transparent; }
+.main-content-wrapper { 
+  background: rgba(255, 255, 255, 0.70); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 1;
+  display: flow-root;
+}
 .text-center { text-align: center; }
 .bg-sub { background-color: var(--color-blue-light); }
 
@@ -191,12 +210,19 @@ header.site-header {
 
 /* --- Sections & Cards --- */
 .campaign-banner {
-  background: var(--color-red); color: white; padding: 32px; text-align: center;
-  margin-top: -60px; position: relative; z-index: 20; border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(230, 57, 70, 0.3);
+  background: var(--color-red); color: white; padding: 40px; text-align: center;
+  margin-top: -80px; position: relative; z-index: 100; border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(230, 57, 70, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.campaign-banner:hover {
+  transform: translateY(-85px) scale(1.02);
+  background-color: #f2505d;
+  box-shadow: 0 40px 80px rgba(230, 57, 70, 0.5);
 }
 
-.glass-card { background: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+.glass-card { background: rgba(255, 255, 255, 0.80) !important; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
   background: var(--color-white); border: 2px solid var(--color-blue-light);
   border-radius: 24px; padding: 50px; transition: var(--transition);
 }
@@ -341,7 +367,7 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* Global Contact CTA Section (above footer) */
 .global-contact-cta {
-    background-color: #f9f9f9;
+    background-color: transparent;
     padding: 80px 0;
 }
 .contact-nav-global {
