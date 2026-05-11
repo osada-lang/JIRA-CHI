@@ -236,18 +236,18 @@ header.site-header {
 }
 .drawer-overlay.active { opacity: 1; visibility: visible; }
 .drawer-menu {
-  position: fixed; top: 0; right: -100%; width: 100%; max-width: 450px; height: 100%;
-  background: var(--color-white); z-index: 2001; padding: 100px 50px;
+  position: fixed; top: 0; right: -100%; width: 100%; max-width: 400px; height: 100%;
+  background: var(--color-white); z-index: 2001; padding: 60px 40px;
   display: flex; flex-direction: column; transition: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   box-shadow: -20px 0 50px rgba(0,0,0,0.1);
 }
 .drawer-menu.active { right: 0; }
-.drawer-close { position: absolute; top: 40px; right: 40px; font-size: 2.5rem; cursor: pointer; color: var(--color-navy); }
-.drawer-nav li { margin-bottom: 32px; }
-.drawer-nav a { font-size: 1.4rem; font-weight: 700; color: var(--color-navy); }
+.drawer-close { position: absolute; top: 30px; right: 30px; font-size: 2rem; cursor: pointer; color: var(--color-navy); }
+.drawer-nav li { margin-bottom: 20px; }
+.drawer-nav a { font-size: 1.15rem; font-weight: 700; color: var(--color-navy); }
 .drawer-nav a:hover { color: var(--color-red); }
-.drawer-cta { margin-top: auto; display: flex; flex-direction: column; gap: 20px; }
-.btn-cta { width: 100%; padding: 22px; border-radius: 16px; text-align: center; font-weight: 700; font-size: 1.2rem; }
+.drawer-cta { margin-top: auto; display: flex; flex-direction: column; gap: 15px; }
+.btn-cta { width: 100%; padding: 18px; border-radius: 12px; text-align: center; font-weight: 700; font-size: 1.1rem; }
 .btn-contact { background-color: var(--color-red); color: var(--color-white); }
 .btn-phone { background-color: var(--color-navy); color: var(--color-white); }
 
