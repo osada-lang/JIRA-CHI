@@ -44,11 +44,18 @@
 /* --- Global Background & Glass --- */
 body { background-color: var(--color-navy); }
 
-/* Glassmorphism utility for sections */
+/* Remove old glass-section and glass-card transparency */
 .glass-section {
-  background: rgba(255, 255, 255, 0.45) !important;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background: var(--color-white) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.glass-card {
+  background: var(--color-white) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none;
 }
 
 /* --- Design Tokens & Base --- */
@@ -105,10 +112,32 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* The "Wall" - Solid white container */
 .cafe-wall {
-  background-color: var(--color-white);
+  background-color: #FFFFFF !important; /* Force solid white */
   padding: 100px 60px;
   position: relative;
   box-shadow: 0 0 40px rgba(0,0,0,0.05);
+  opacity: 1 !important;
+}
+
+.about-image-wrapper {
+  width: 100%;
+  margin-bottom: 50px;
+  background: white;
+  padding: 15px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transform: rotate(-1deg);
+  transition: var(--transition);
+}
+
+.about-image-wrapper:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Split Layout: Wall on one side, Window (Ocean) on the other */
@@ -152,9 +181,27 @@ img { max-width: 100%; height: auto; display: block; }
 /* Portfolio Window Frame Cards */
 .portfolio-window-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 100px 60px; /* Large vertical gap to see the ocean */
+  grid-template-columns: repeat(2, 1fr); /* Force 2 columns for the window look */
+  gap: 100px 60px;
   padding: 100px 40px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-window-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 60px;
+    padding: 60px 20px;
+  }
+  .frame-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .portfolio-title-block {
+    display: block !important;
+    margin: 0 auto 40px !important;
+    text-align: center;
+  }
 }
 
 .frame-card {
@@ -255,13 +302,51 @@ header.site-header {
   background-color: var(--color-navy);
   background-size: cover;
   background-position: center;
-  
+  background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .sub-hero {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 2000 / 624; /* Precision matching of the actual image ratio */
+    background-size: 100% 100%; /* Force image to fill the exact container size */
+    background-position: top center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .sub-hero-overlay {
+    height: 100%;
+  }
+  .sub-hero-content {
+    padding: 5px 15px !important; /* Further reduced for the shorter height */
+    width: 95%;
+  }
+  .sub-hero-content::before,
+  .sub-hero-content::after {
+    width: 20px !important;
+    height: 20px !important;
+    border-width: 1px !important;
+  }
+  .sub-hero-title {
+    font-size: 1.0rem !important; /* Scaled down to fit the narrow strip */
+    margin-bottom: 0 !important;
+    letter-spacing: 0.05em !important;
+  }
+  .sub-hero-subtitle {
+    font-size: 0.5rem !important;
+    letter-spacing: 0.02em !important;
+    margin-top: -2px !important;
+  }
 }
 
 .sub-hero-overlay {
@@ -679,19 +764,19 @@ a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global 
         line-height: 1.5;
     }
     .sub-hero-content {
-        padding: 25px 40px;
+        padding: 15px 30px;
     }
     .sub-hero-content::before,
     .sub-hero-content::after {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
     }
     .sub-hero-title {
-        font-size: 1.6rem !important;
+        font-size: 1.4rem !important;
         letter-spacing: 0.1em;
     }
     .sub-hero-subtitle {
-        font-size: 0.8rem !important;
+        font-size: 0.7rem !important;
         letter-spacing: 0.15em;
     }
 
