@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>よくある質問 | 株式会社ジラーチ</title>
+  <link rel="icon" href="/assets/favicon-DBY_WiwV.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .faq-section-title {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--color-navy);
+      margin: 60px 0 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .faq-accordion {
+      display: grid;
+      gap: 15px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-question {
+      width: 100%;
+      padding: 24px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      text-align: left;
+      background: none;
+      border: none;
+      outline: none;
+      transition: background 0.3s ease;
+    }
+
+    .faq-question:hover {
+      background: #f8f9fa;
+    }
+
+    .faq-q-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .faq-q-icon {
+      flex: 0 0 36px;
+      height: 36px;
+      background: var(--color-navy);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .faq-q-text {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      line-height: 1.5;
+    }
+
+    .faq-toggle {
+      font-size: 1.2rem;
+      color: #ccc;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-toggle {
+      transform: rotate(180px);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease;
+      background: #fcfcfc;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      /* 十分な高さ */
+      padding-bottom: 30px;
+    }
+
+    .faq-a-inner {
+      padding: 0 30px 24px 86px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .faq-a-icon {
+      flex: 0 0 36px;
+      height: 36px;
+      border: 2px solid var(--color-red);
+      color: var(--color-red);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    .faq-a-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--color-text-main);
+    }
+
+    @media (max-width: 768px) {
+      .faq-q-inner {
+        gap: 12px;
+      }
+
+      .faq-a-inner {
+        padding: 0 20px 20px 20px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .faq-q-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" crossorigin href="/assets/style-C5vKZnhb.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container-full header-inner">
+      <a href="./index.html" class="logo">
+        <img src="/assets/jirachi_logo_transparent-B2N99WIJ.png" alt="JIRA-CHI Logo">
+      </a>
+      <div class="header-controls">
+        <a href="tel:050-6868-9731" class="header-info-link">
+          <i class="fa-solid fa-phone"></i> 050-6868-9731
+        </a>
+        <div class="header-separator"></div>
+        <a href="./contact.html" class="header-info-link">
+          <i class="fa-solid fa-envelope"></i> CONTACT
+        </a>
+        <button id="hamburger-btn" class="hamburger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer Menu -->
+  <div id="drawer-overlay" class="drawer-overlay"></div>
+  <div id="drawer-menu" class="drawer-menu">
+    <div id="drawer-close" class="drawer-close">&times;</div>
+    <nav class="drawer-nav">
+      <ul>
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./about.html">当社について</a></li>
+        <li><a href="./service.html">事業内容</a></li>
+        <li><a href="./portfolio.html">実績紹介</a></li>
+        <li><a href="./flow.html">ご利用の流れ</a></li>
+        <li><a href="./faq.html">よくある質問</a></li>
+        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+    <div class="drawer-cta">
+      <a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+      <a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a>
+    </div>
+  </div>
+
+  <main style="padding-top: var(--header-height);">
+    <!-- Sub Page Hero -->
+    <section class="sub-hero" style="background-image: url('/assets/faq_hero-CFR7gTR3.jpg');">
+      <div class="sub-hero-overlay"></div>
+      <div class="sub-hero-content">
+        <h1 class="sub-hero-title">よくある質問</h1>
+        <p class="sub-hero-subtitle">FAQ</p>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-container">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="./index.html">ホーム</a> <span>/</span> よくある質問
+        </nav>
+      </div>
+    </div>
+
+    <section class="section-padding">
+      <div class="container" style="max-width: 900px;">
+
+        <!-- Category: General -->
+        <h2 class="faq-section-title"><i class="fa-solid fa-building"></i> サービス・体制について</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">相談や見積もりは無料ですか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">はい、完全無料です。まずはお気軽にお問い合わせください。オンライン会議等でヒアリングを行い、最適な提案をさせていただきます。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">日本語でのやり取りは可能ですか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">
+                  はい、すべて日本語で完結いたします。ベトナムの自社拠点には日本人スタッフが常駐しており、コミュニケーションの齟齬が発生しない体制を整えております。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">開発スピードが速いのはなぜですか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">最新のAI技術（Vibecoding）を活用し、定型的なコーディング作業を極限まで自動化しているためです。これにより、人間は設計やUXの向上、品質保証に集中することができ、従来の数倍のスピードでリリースを実現しています。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category: Campaign -->
+        <h2 class="faq-section-title"><i class="fa-solid fa-mobile-screen-button"></i> スマホアプリ無料開発について</h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">本当に無料で開発・公開してくれるのですか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">はい。弊社の実績として公開させていただくことを前提に、初期開発費用、ストア申請費用、保守運用費用をジラーチが負担いたします。皆様からは素晴らしい「アプリのアイデア」をご提供いただく形となります。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">アプリの所有権や名義はどうなりますか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">原則として、アプリの所有権（知的財産権）およびストア公開名義は「株式会社ジラーチ」となります。ご提案いただいた方は「企画協力・発案者」としてクレジット掲載等でご紹介させていただくことが可能です。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">広告収入が発生した場合の配分は？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">本キャンペーンで開発したアプリの収益（広告収入・課金等）は、開発・サーバー維持費用の補填として、全額「株式会社ジラーチ」の帰属となります。あらかじめご了承ください。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <div class="faq-q-inner">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-q-text">どんなアイデアでも採用されますか？</span>
+              </div>
+              <i class="fa-solid fa-chevron-down faq-toggle"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-a-inner">
+                <span class="faq-a-icon">A</span>
+                <p class="faq-a-text">アイデアの新規性、市場性、および弊社の技術ポートフォリオとしての適合性を総合的に判断させていただきます。まずは気軽にお話しを聞かせてください。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-new">
+    <div class="container">
+      <img src="/assets/jirachi_logo_transparent-B2N99WIJ.png" alt="Logo" class="footer-logo-center">
+      <div class="footer-address">
+        〒４８５−０８２６<br>愛知県小牧市東田中６９３−１
+      </div>
+      <hr class="footer-divider">
+      <ul class="footer-nav-horizontal">
+        <li><a href="./index.html">ホーム</a></li>
+        <li><a href="./about.html">当社について</a></li>
+        <li><a href="./service.html">事業内容</a></li>
+        <li><a href="./portfolio.html">実績紹介</a></li>
+        <li><a href="./flow.html">ご利用の流れ</a></li>
+        <li><a href="./faq.html">よくある質問</a></li>
+        <li><a href="./privacy.html">プライバシーポリシー</a></li>
+        <li><a href="./contact.html">お問い合わせ</a></li>
+      </ul>
+      <hr class="footer-divider">
+      <div class="footer-copyright">
+        © 2025 株式会社ジラーチ
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+  <script>
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('active');
+
+        // 他のアコーディオンを閉じる場合は以下を有効化
+        /*
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== item) otherItem.classList.remove('active');
+        });
+        */
+      });
+    });
+  </script>
+</body>
+
+</html>
