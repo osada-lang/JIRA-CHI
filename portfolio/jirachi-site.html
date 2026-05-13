@@ -35,7 +35,7 @@
           <img src="../jirachi_logo_transparent.png" alt="JIRA-CHI Logo" style="height:120px; width:auto; flex-shrink:0;">
           <div>
             <h1 style="font-size:3rem; font-weight:900; margin-bottom:12px;">株式会社ジラーチ</h1>
-            <p style="font-size:1.2rem; color:var(--color-text-sub); font-weight:700;">AI開発と品質保証の専門性を伝える公式サイト</p>
+            <p style="font-size:1.2rem; color:var(--color-text-sub); font-weight:700;">「海辺のカフェ」をコンセプトとした、開放感溢れる次世代コーポレートサイト</p>
           </div>
         </div>
 
@@ -43,17 +43,17 @@
         
         <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:60px; margin-bottom:80px;">
           <div>
-            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-red); padding-bottom:16px; margin-bottom:32px;">課題と解決策</h2>
-            <p style="font-size:1.1rem; line-height:2.2;">「圧倒的スピードと、揺るぎない品質」というジラーチのアイデンティティを視覚化するため、最新のWebトレンドを取り入れたコーポレートサイトとしてリニューアル。ソフトウェアテストの厳格さと、AI開発の革新性を両立させたデザインを追求しました。</p>
+            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-red); padding-bottom:16px; margin-bottom:32px;">コンセプト：海辺のカフェ</h2>
+            <p style="font-size:1.1rem; line-height:2.2;">「圧倒的スピードと、揺るぎない品質」というジラーチの強みを、より直感的に伝えるためにデザインを刷新。不透明な白い壁（コンテンツ）と、大きな窓から見える海（背景動画）を対比させることで、清潔感、信頼感、そして未来への開放感を同時に演出しました。単なる情報の列挙ではなく、ブランドストーリーを語る「ABOUT US」主導の構成へと進化させています。</p>
           </div>
           <div>
-            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-navy); padding-bottom:16px; margin-bottom:32px;">技術的挑戦</h2>
-            <p style="font-size:1.1rem; line-height:2.2;">Glassmorphism（透過ガラス）を活用したモダンなUIと、固定背景のパララックス効果により、先進的な印象を演出。また、実機での操作感を重視し、スマホ表示時のアドレスバーによるガタつきや、文字サイズのバランスを極限まで微調整しています。</p>
-            <h3 style="font-size:1.3rem; font-weight:900; margin-top:32px; margin-bottom:16px; color:var(--color-navy);"><i class="fa-solid fa-film" style="color:var(--color-red); margin-right:8px;"></i>ヒーロー動画クロスフェード</h3>
-            <p style="font-size:1.1rem; line-height:2.2;">ループ再生時に生じる「カクつき」を解消するため、2本の動画要素を重ねて交互にクロスフェードさせる独自ロジックを実装。<code style="background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:0.95em;">currentVid</code>トラッキングによる二重発火防止と、<code style="background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:0.95em;">ended</code>イベントのフォールバック対応により、6秒の動画を最大2.8秒のクロスフェードで継ぎ目なくループさせています。</p>
+            <h2 style="font-size:1.8rem; font-weight:900; border-bottom:4px solid var(--color-navy); padding-bottom:16px; margin-bottom:32px;">技術的挑戦と最適化</h2>
+            <p style="font-size:1.1rem; line-height:2.2;">デザインの美しさだけでなく、ユーザー体験を損なわないための極限の微調整を行いました。特に動画のループ制御やモバイルでの表示安定性は、技術的なこだわりが詰まった部分です。</p>
+            <h3 style="font-size:1.3rem; font-weight:900; margin-top:32px; margin-bottom:16px; color:var(--color-navy);"><i class="fa-solid fa-clock" style="color:var(--color-red); margin-right:8px;"></i>精密な動画ループ制御</h3>
+            <p style="font-size:1.1rem; line-height:2.2;">従来のイベント監視では避けられなかった「一瞬の瞬き」を解消。<code>requestAnimationFrame</code>を用いた100ミリ秒単位の精密な監視ロジックを導入。動画の終端をミリ秒単位で予測してクロスフェードを開始することで、24時間365日、継ぎ目のないシームレスなループ再生を実現しました。</p>
 
-            <h3 style="font-size:1.3rem; font-weight:900; margin-top:32px; margin-bottom:16px; color:var(--color-navy);"><i class="fa-solid fa-wand-magic-sparkles" style="color:var(--color-red); margin-right:8px;"></i>シームレスな透過背景の実装</h3>
-            <p style="font-size:1.1rem; line-height:2.2;">透過背景と<code style="background:#f0f0f0; padding:2px 6px; border-radius:4px; font-size:0.95em;">backdrop-filter</code>を多用するデザインにおいて、セクション間に生じる微細なレンダリング境界線を解消。各セクション個別に背景を設定するのではなく、親要素（Wrapper）に一括して透過背景とぼかしを適用する構造に最適化することで、スクロール時も継ぎ目のない美しい視覚体験を実現しました。</p>
+            <h3 style="font-size:1.3rem; font-weight:900; margin-top:32px; margin-bottom:16px; color:var(--color-navy);"><i class="fa-solid fa-mobile-screen" style="color:var(--color-red); margin-right:8px;"></i>モバイルでの「余白ゼロ」対応</h3>
+            <p style="font-size:1.1rem; line-height:2.2;">背景画像を全体表示にする際、スマホ画面で生じがちな「意図しない余白（背景色の露出）」を徹底排除。実際の画像アスペクト比（2000:624）をCSSに厳密に反映させることで、あらゆるデバイスにおいて画像がヘッダーやコンテンツとピタッと密着する、完璧なレスポンシブデザインを構築しました。</p>
           </div>
         </div>
 
