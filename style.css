@@ -95,12 +95,91 @@ img { max-width: 100%; height: auto; display: block; }
 .section-padding { padding: 120px 0; } 
 .section-padding:not(.hero) { background: transparent; }
 .main-content-wrapper { 
-  background: rgba(255, 255, 255, 0.70); 
-  backdrop-filter: blur(12px); 
-  -webkit-backdrop-filter: blur(12px);
+  background: transparent; 
   position: relative;
   z-index: 1;
   display: flow-root;
+}
+
+/* --- Seaside Cafe Layout Components --- */
+
+/* The "Wall" - Solid white container */
+.cafe-wall {
+  background-color: var(--color-white);
+  padding: 100px 60px;
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.05);
+}
+
+/* Split Layout: Wall on one side, Window (Ocean) on the other */
+.split-section {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+}
+
+.split-section .wall-side {
+  width: 50%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.split-section .window-side {
+  width: 50%;
+  background: transparent;
+}
+
+/* Reversed Split */
+.split-section.reversed {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+  .split-section {
+    flex-direction: column;
+  }
+  .split-section .wall-side,
+  .split-section .window-side {
+    width: 100%;
+  }
+  .split-section .window-side {
+    height: 300px;
+  }
+}
+
+/* Portfolio Window Frame Cards */
+.portfolio-window-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 100px 60px; /* Large vertical gap to see the ocean */
+  padding: 100px 40px;
+}
+
+.frame-card {
+  background: var(--color-white);
+  padding: 20px;
+  border: 15px solid var(--color-white); /* Thick frame look */
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  transition: var(--transition);
+}
+
+.frame-card:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+/* Full Width Shade Banner */
+.shade-banner {
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: 60px 40px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  border-radius: 0;
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
 }
 .text-center { text-align: center; }
 .bg-sub { background-color: var(--color-blue-light); }
