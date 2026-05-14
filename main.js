@@ -59,6 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentVid = vidA;
     let nextVid = vidB;
 
+    const loadingScreen = document.getElementById('loading-screen');
+    const hideLoading = () => {
+      if (loadingScreen && !loadingScreen.classList.contains('loaded')) {
+        loadingScreen.classList.add('loaded');
+        document.body.classList.remove('loading');
+        console.log("Loading screen hidden");
+      }
+    };
+
     const crossfade = () => {
       if (isFading) return;
       isFading = true;
@@ -117,9 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const init = () => {
       vidA.play().then(() => {
         console.log("Initial video started");
+        hideLoading();
         requestAnimationFrame(update);
       }).catch(e => {
         console.log("Initial play blocked. Waiting for interaction.");
+        hideLoading(); // インタラクション待ちでもローディングは隠す（クリックを促すメッセージ等がある可能性があるため。今回はシンプルに隠す）
         const startOnInteract = () => {
           vidA.play().then(() => {
             requestAnimationFrame(update);
