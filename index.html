@@ -257,6 +257,17 @@
 
 
   <script type="module" src="./main.js"></script>
+  <script>
+    // Fallback: Ensure loading screen disappears even if main script fails (e.g. local file:// access)
+    setTimeout(function() {
+      var loader = document.getElementById('loading-screen');
+      if (loader && !loader.classList.contains('loaded')) {
+        loader.classList.add('loaded');
+        document.body.classList.remove('loading');
+        console.warn("Loading screen hidden by fallback timer.");
+      }
+    }, 2500);
+  </script>
 </body>
 
 </html>
