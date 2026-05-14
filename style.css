@@ -11,7 +11,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0B132B; /* var(--color-navy) equivalent to ensure it works during initial load */
+  background-color: rgba(11, 19, 43, 0.85); /* Semi-transparent navy */
+  backdrop-filter: blur(10px); /* Glass effect */
+  -webkit-backdrop-filter: blur(10px);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -25,13 +27,16 @@
 }
 
 .loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   max-width: 200px;
   width: 100%;
 }
 
 .loading-logo {
-  width: 120px;
+  width: 140px;
   height: auto;
   margin-bottom: 30px;
   filter: brightness(0) invert(1); /* Logo to white */
@@ -39,7 +44,7 @@
 }
 
 .loading-bar-container {
-  width: 100%;
+  width: 140px;
   height: 2px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
