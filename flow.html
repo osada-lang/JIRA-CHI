@@ -141,7 +141,7 @@
 
 </head>
 
-<body>
+<body class="loading"><!-- Loading Screen --><div id="loading-screen" class="loading-screen"><div class="loading-content"><img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo" class="loading-logo"><div class="loading-bar-container"><div class="loading-bar"></div></div></div></div>
   <!-- Header -->
   <header class="site-header">
     <div class="container-full header-inner">
@@ -337,6 +337,6 @@
   </footer>
 
   <script type="module" src="./main.js"></script>
-</body>
+  <script>setTimeout(function() { var loader = document.getElementById("loading-screen"); if (loader && !loader.classList.contains("loaded")) { loader.classList.add("loaded"); document.body.classList.remove("loading"); console.warn("Loading screen hidden by 10s fallback timer."); } }, 10000);</script></body>
 
 </html>

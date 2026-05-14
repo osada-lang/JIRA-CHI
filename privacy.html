@@ -36,7 +36,7 @@
     .contact-box { margin-top: 40px; padding: 20px 0; border-top: 1px dashed #ccc; border-bottom: 1px dashed #ccc; width: fit-content; min-width: 300px; }
   </style>
       </head>
-<body>
+<body class="loading"><!-- Loading Screen --><div id="loading-screen" class="loading-screen"><div class="loading-content"><img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo" class="loading-logo"><div class="loading-bar-container"><div class="loading-bar"></div></div></div></div>
     <header class="site-header">
       <div class="container-full header-inner">
         <a href="./index.html" class="logo"><img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo"></a>
@@ -242,5 +242,5 @@
   <a href="#" class="page-top-btn"><i class="fa-solid fa-chevron-up"></i></a>
 
     <script type="module" src="./main.js"></script>
-</body>
+  <script>setTimeout(function() { var loader = document.getElementById("loading-screen"); if (loader && !loader.classList.contains("loaded")) { loader.classList.add("loaded"); document.body.classList.remove("loading"); console.warn("Loading screen hidden by 10s fallback timer."); } }, 10000);</script></body>
 </html>
