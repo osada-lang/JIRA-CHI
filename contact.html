@@ -22,6 +22,8 @@
     .contact-nav-label { font-size: 0.9rem; color: #666; margin-bottom: 20px; }
     .contact-nav-btn { display: flex; align-items: center; justify-content: center; gap: 12px; background: var(--color-red); color: white; padding: 25px; border-radius: 4px; font-weight: 700; font-size: 1.2rem; transition: var(--transition); }
     .contact-nav-btn:hover { background: var(--color-navy); }
+    .contact-nav-btn[href^="tel:"] { background: var(--color-navy); }
+    .contact-nav-btn[href^="tel:"]:hover { background: var(--color-red); }
   </style>
       </head>
 <body class="loading"><!-- Loading Screen --><div id="loading-screen" class="loading-screen"><div class="loading-content"><img src="./jirachi_logo_transparent.png" alt="JIRA-CHI Logo" class="loading-logo"><div class="loading-bar-container"><div class="loading-bar"></div></div></div></div>

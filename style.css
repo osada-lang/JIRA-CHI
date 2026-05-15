@@ -688,6 +688,14 @@ footer .logo-footer { height: 80px; width: auto; }
     background: var(--color-navy);
 }
 
+/* Phone button specific override */
+.contact-nav-btn-global[href^="tel:"] {
+    background: var(--color-navy);
+}
+.contact-nav-btn-global[href^="tel:"]:hover {
+    background: var(--color-red);
+}
+
 .header-info-link:hover {
     color: var(--color-red) !important;
 }
