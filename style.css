@@ -675,7 +675,7 @@ footer .logo-footer { height: 80px; width: auto; }
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background: var(--color-navy);
+    background: var(--color-red);
     color: white;
     padding: 25px;
     border-radius: 4px;
@@ -685,7 +685,7 @@ footer .logo-footer { height: 80px; width: auto; }
     text-decoration: none;
 }
 .contact-nav-btn-global:hover {
-    background: var(--color-red);
+    background: var(--color-navy);
 }
 
 .header-info-link:hover {
