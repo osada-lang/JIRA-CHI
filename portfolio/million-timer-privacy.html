@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ミリオン・タイマー プライバシーポリシー | 実績紹介 | 株式会社ジラーチ</title>
+  <meta name="description" content="ミリオン・タイマーのプライバシーポリシーページです。個人情報の取り扱い、Google ログイン、Firebase、AdMob に関する説明。">
+  <link rel="icon" href="../favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&family=Outfit:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .pp-content { line-height: 2.2; font-size: 0.95rem; color: #555; }
+    .pp-section { margin-top: 40px; }
+    .pp-title { font-weight: 700; font-size: 1.1rem; color: var(--color-navy); margin-bottom: 15px; border-left: 4px solid var(--color-red); padding-left: 15px; }
+  </style>
+</head>
+<body>
+    <header class="site-header">
+      <div class="container-full header-inner">
+        <a href="../index.html" class="logo"><img src="../jirachi_logo_transparent.png" alt="JIRA-CHI Logo"></a>
+        <div class="header-controls">
+          <a href="tel:050-6868-9731" class="header-info-link"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
+          <div class="header-separator"></div>
+          <a href="../contact.html" class="header-info-link"><i class="fa-solid fa-envelope"></i> CONTACT</a>
+          <button id="hamburger-btn" class="hamburger-btn"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+    <div id="drawer-overlay" class="drawer-overlay"></div><div id="drawer-menu" class="drawer-menu"><div id="drawer-close" class="drawer-close">&times;</div><nav class="drawer-nav"><ul><li><a href="../index.html">ホーム</a></li><li><a href="../about.html">当社について</a></li><li><a href="../service.html">事業内容</a></li><li><a href="../portfolio.html">実績紹介</a></li><li><a href="../flow.html">ご利用の流れ</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../privacy.html">プライバシーポリシー</a></li></ul></nav><div class="drawer-cta"><a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a><a href="../contact.html" class="btn-cta btn-contact">お問い合わせ</a></div></div>
+    <main style="padding-top: var(--header-height);">
+      <div class="breadcrumb-container"><div class="container"><nav class="breadcrumb"><a href="../index.html">ホーム</a> <span>/</span> <a href="../portfolio.html">実績紹介</a> <span>/</span> <a href="million-timer.html">ミリオン・タイマー</a> <span>/</span> プライバシーポリシー</nav></div></div>
+      <section class="section-padding"><div class="container" style="max-width:900px;">
+        <div class="pp-content">
+          <p>このプライバシーポリシー（以下「本ポリシー」）は、「ミリオン・タイマー」（以下「本アプリ」）の提供にあたり、利用者の情報の取り扱いについて説明するものです。</p>
+
+          <div class="pp-section">
+            <h3 class="pp-title">1. 収集する情報と利用目的</h3>
+            <p>本アプリは、以下の情報を収集し、利用目的に応じて処理します。</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+              <li><strong>Google ログイン情報</strong>: Google アカウントの ID、メールアドレス、プロフィール画像（ユーザー認証と本人確認の目的）</li>
+              <li><strong>ポイント情報</strong>: 獲得ポイント数、交換履歴、交換額（ポイント管理と交換処理の目的）</li>
+              <li><strong>タイマー利用情報</strong>: タイマー使用回数、広告視聴回数、タイマー時間（サービス改善と不正利用防止の目的）</li>
+              <li><strong>デバイス情報</strong>: デバイス ID、OS バージョン、アプリバージョン（サービス提供と不正利用防止の目的）</li>
+              <li><strong>位置情報</strong>: 収集しません</li>
+            </ul>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">2. Google ログイン（Firebase Authentication）</h3>
+            <p>本アプリは、Google ログインを使用してユーザー認証を行います。Google ログイン時に、Google から提供される ID、メールアドレス、プロフィール画像を取得します。これらの情報は Firebase Authentication で管理され、本人確認とアカウント管理の目的でのみ使用されます。Google のプライバシーポリシーについては、<a href="https://policies.google.com/privacy" target="_blank" style="color: var(--color-red); text-decoration: none;">Google プライバシーポリシー</a>をご参照ください。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">3. ポイント管理（Firestore）</h3>
+            <p>獲得したポイントは、Google Cloud の Firestore（NoSQL データベース）で一元管理されます。ポイント情報は暗号化されて保存され、本人確認済みのユーザーのみがアクセスできます。ポイント二重計上の防止、複数デバイス間での同期、および不正利用防止の目的で使用されます。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">4. 広告とリワード検証（AdMob）</h3>
+            <p>本アプリは Google AdMob を使用してリワード広告を配信しています。AdMob は、広告の視聴を検証し、リワード付与の正当性を確認します。AdMob は、デバイス ID、広告視聴時刻、視聴完了情報などを収集します。詳細は <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: var(--color-red); text-decoration: none;">Google 広告に関するポリシー</a>をご参照ください。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">5. AdMob Server-to-Server Verification</h3>
+            <p>リワード広告の視聴完了を検証するため、AdMob Server-to-Server Verification を使用しています。これにより、Google 側でリワード付与の正当性を確認し、開発者ツールでのポイント改ざんを防止しています。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">6. ポイント交換（えらべるPAY API）</h3>
+            <p>ポイントを景品に交換する際、本アプリは Giftee の「えらべるPAY」API と連携します。交換時に、ユーザーの ID、交換ポイント数、交換額などの情報が Giftee に送信されます。Giftee のプライバシーポリシーについては、<a href="https://giftee.com/" target="_blank" style="color: var(--color-red); text-decoration: none;">Giftee 公式サイト</a>をご参照ください。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">7. 通信セキュリティ</h3>
+            <p>本アプリと Google Cloud（Firebase）間の通信は、HTTPS により暗号化されています。Firebase Security Rules により、認証されたユーザーのみが自身のデータにアクセスできるよう制御されています。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">8. API キー管理</h3>
+            <p>えらべるPAY API キーは、環境変数（`.env`）で管理され、Git リポジトリには含まれません。API キーは Firebase Cloud Functions 内でのみ使用され、クライアント側には公開されません。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">9. 上限管理とアラート</h3>
+            <p>ポイント交換は、以下の上限で管理されています。</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+              <li><strong>ユーザーごとの上限</strong>: 1日1万円</li>
+              <li><strong>全体の上限</strong>: 1日10万円</li>
+              <li><strong>アラート</strong>: 1日の交換合計額が 50,000円 を超えた場合、管理者にメール通知</li>
+            </ul>
+            <p style="margin-top: 15px;">これらの上限は、不正利用による被害を最小化し、ユーザーの安全を確保するために設定されています。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">10. 情報の保持期間</h3>
+            <p>ユーザーがアカウントを削除した場合、関連するすべての個人情報は Firestore から削除されます。ただし、法律で定められた期間は、適切に保管される場合があります。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">11. 第三者への情報提供</h3>
+            <p>本アプリは、ユーザーの同意なしに個人情報を第三者に提供することはありません。ただし、以下の場合は例外とします。</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+              <li>法律で定められた場合</li>
+              <li>ユーザーの安全や権利を保護するために必要な場合</li>
+              <li>ポイント交換時に Giftee へ必要な情報を提供する場合</li>
+            </ul>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">12. ユーザーの権利</h3>
+            <p>ユーザーは、以下の権利を有しています。</p>
+            <ul style="margin-left: 20px; margin-top: 15px;">
+              <li>自身の個人情報の開示を請求する権利</li>
+              <li>自身の個人情報の修正を請求する権利</li>
+              <li>自身の個人情報の削除を請求する権利（アカウント削除）</li>
+              <li>個人情報の処理に異議を唱える権利</li>
+            </ul>
+            <p style="margin-top: 15px;">これらの請求は、お問い合わせフォームからご連絡ください。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">13. ポリシーの変更</h3>
+            <p>本ポリシーは、予告なく変更される場合があります。変更があった場合は、本アプリ内またはウェブサイトで通知されます。</p>
+          </div>
+
+          <div class="pp-section">
+            <h3 class="pp-title">14. お問い合わせ</h3>
+            <p>本ポリシーに関するご質問やご不明な点がございましたら、お気軽にお問い合わせください。</p>
+            <div style="margin-top:40px; text-align:center;">
+              <a href="../contact.html" class="btn-cta btn-contact" style="display:inline-block; padding:20px 60px; font-size:1.2rem; border-radius:4px; text-decoration:none;">お問い合わせ</a>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top:80px; text-align:center;">
+          <a href="million-timer.html" class="btn-cta btn-phone" style="display:inline-block; padding:15px 40px; border-radius:12px; text-decoration:none;">実績詳細へ戻る</a>
+        </div>
+
+      </div></section>
+    </main>
+    <footer class="site-footer-new"><div class="container"><img src="../jirachi_logo_transparent.png" alt="Logo" class="footer-logo-center" style="height:90px; display:block; margin:0 auto 25px;"><div class="footer-address">〒４８５−０８２６<br>愛知県小牧市東田中６９３−１</div><hr class="footer-divider"><ul class="footer-nav-horizontal"><li><a href="../index.html">ホーム</a></li><li><a href="../about.html">当社について</a></li><li><a href="../service.html">事業内容</a></li><li><a href="../portfolio.html">実績紹介</a></li><li><a href="../flow.html">ご利用の流れ</a></li><li><a href="../faq.html">よくある質問</a></li><li><a href="../privacy.html">プライバシーポリシー</a></li><li><a href="../contact.html">お問い合わせ</a></li></ul><hr class="footer-divider"><div class="footer-copyright">© 2025 株式会社ジラーチ</div></div></footer><a href="#" class="page-top-btn"><i class="fa-solid fa-chevron-up"></i></a>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>
