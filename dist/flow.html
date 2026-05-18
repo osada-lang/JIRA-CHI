@@ -5,14 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ご利用の流れ | 株式会社ジラーチ</title>
-  <meta name="description" content="株式会社ジラーチのサービス提供フロー。お問い合わせからヒアリング、ご提案、開発・検証、リリース後の運用保守まで、お客様のプロジェクトを成功に導くステップをわかりやすく解説します。">
-  <meta property="og:site_name" content="株式会社ジラーチ">
-  <meta property="og:title" content="ご利用の流れ | 株式会社ジラーチ">
-  <meta property="og:description" content="お問い合わせからリリース、その後の運用まで。株式会社ジラーチがパートナーとして伴走する、安心の開発プロセスを紹介します。">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://jira-chi.net/flow.html">
-  <meta property="og:image" content="https://jira-chi.net/flow_hero.jpg">
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/assets/favicon-DBY_WiwV.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,50 +91,26 @@
 
     @media (max-width: 768px) {
       .flow-step {
+        flex-direction: column;
         gap: 20px;
         margin-bottom: 60px;
-        align-items: flex-start;
-      }
-
-      .flow-number {
-        flex: 0 0 50px;
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
       }
 
       .flow-step:not(:last-child)::after {
-        left: 25px;
-        top: 60px;
-        bottom: -30px;
-      }
-
-      .flow-content {
-        padding-top: 5px;
+        left: 35px;
+        top: 70px;
       }
 
       .flow-content h3 {
-        font-size: 1.3rem;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .flow-content p {
-        font-size: 0.95rem;
-      }
-
-      .flow-detail-box {
-        padding: 16px;
-        font-size: 0.85rem;
+        font-size: 1.5rem;
       }
     }
   </style>
 
-  <script type="module" crossorigin src="/assets/main-Bc28cMhl.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-Up6179-T.css">
+  <link rel="stylesheet" crossorigin href="/assets/style-C5vKZnhb.css">
 </head>
 
-<body class="loading"><!-- Loading Screen --><div id="loading-screen" class="loading-screen"><div class="loading-content"><img src="/assets/jirachi_logo_transparent-B2N99WIJ.png" alt="JIRA-CHI Logo" class="loading-logo"><div class="loading-bar-container"><div class="loading-bar"></div></div></div></div>
+<body>
   <!-- Header -->
   <header class="site-header">
     <div class="container-full header-inner">
@@ -183,7 +151,7 @@
     </nav>
     <div class="drawer-cta">
       <a href="tel:050-6868-9731" class="btn-cta btn-phone"><i class="fa-solid fa-phone"></i> 050-6868-9731</a>
-      <a href="./contact.html" class="btn-cta btn-contact">お問い合わせ</a>
+      <a href="./contact.html" class="btn-cta btn-contact">お問い合わせフォーム</a>
     </div>
   </div>
 
@@ -337,6 +305,7 @@
     </div>
   </footer>
 
-  <script>setTimeout(function() { var loader = document.getElementById("loading-screen"); if (loader && !loader.classList.contains("loaded")) { loader.classList.add("loaded"); document.body.classList.remove("loading"); console.warn("Loading screen hidden by 10s fallback timer."); } }, 10000);</script></body>
+  <script src="./main.js"></script>
+</body>
 
 </html>
