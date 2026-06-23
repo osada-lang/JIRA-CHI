@@ -31,6 +31,7 @@ export default defineConfig({
         'portfolio/million-timer': resolve(__dirname, 'portfolio/million-timer.html'),
         'portfolio/million-timer-support': resolve(__dirname, 'portfolio/million-timer-support.html'),
         'portfolio/million-timer-privacy': resolve(__dirname, 'portfolio/million-timer-privacy.html'),
+        'portfolio/danang-fire': resolve(__dirname, 'portfolio/danang-fire.html'),
       },
     },
   },
