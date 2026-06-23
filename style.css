@@ -545,8 +545,16 @@ footer .logo-footer { height: 80px; width: auto; }
 }
 
 /* --- Animations --- */
-.fade-up { opacity: 0; transform: translateY(30px); animation: fadeUp 1.2s forwards; }
-@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  will-change: opacity, transform;
+}
+.animate-on-scroll.fade-up {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (max-width: 1024px) {
   .header-separator, .header-info-link { display: none; } /* Hide phone/email text on small screens, keep hamburger */
@@ -705,7 +713,7 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* "Piku" Micro-interaction for all interactive elements */
 a, button, .service-card, .portfolio-card, .glass-card, .contact-nav-btn-global {
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* Specific elements that should "jump" on hover */
