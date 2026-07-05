@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品質検証チェックシート（サンプル） - 株式会社ジラーチ</title>
+  <style>
+    :root {
+      --primary-color: #0b132b;
+      --secondary-color: #1c2541;
+      --accent-color: #3a506b;
+      --highlight-color: #e63946;
+      --bg-color: #ffffff;
+      --text-color: #2d3748;
+      --border-color: #cbd5e1;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+      color: var(--text-color);
+      background-color: #f7fafc;
+      margin: 0;
+      padding: 0;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Page Container for Screen & Print */
+    .page {
+      background: var(--bg-color);
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 40px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-top: 6px solid var(--primary-color);
+    }
+
+    @media print {
+      body {
+        background-color: #ffffff;
+      }
+      .page {
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        max-width: 100%;
+        border-top: none;
+      }
+      @page {
+        size: portrait;
+        margin: 15mm;
+      }
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+    }
+
+    .title-area h1 {
+      font-size: 1.5rem;
+      margin: 0 0 5px 0;
+      color: var(--primary-color);
+      font-weight: 800;
+    }
+
+    .title-area p {
+      font-size: 0.8rem;
+      color: #718096;
+      margin: 0;
+    }
+
+    .logo-area {
+      text-align: right;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--primary-color);
+    }
+
+    .logo span {
+      color: var(--highlight-color);
+    }
+
+    /* Metadata Info Table */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+    }
+
+    .info-table td {
+      border: 1px solid var(--border-color);
+      padding: 8px 12px;
+    }
+
+    .info-table td.label {
+      background-color: #f8fafc;
+      font-weight: 700;
+      width: 18%;
+      color: var(--secondary-color);
+    }
+
+    /* Checklist Table */
+    .check-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.75rem;
+      margin-bottom: 20px;
+    }
+
+    .check-table th, .check-table td {
+      border: 1px solid var(--border-color);
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .check-table th {
+      background-color: var(--secondary-color);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .check-table th.center, .check-table td.center {
+      text-align: center;
+      width: 8%;
+    }
+
+    .check-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .category-cell {
+      font-weight: 700;
+      color: var(--accent-color);
+      width: 15%;
+    }
+
+    .checkbox {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #718096;
+      border-radius: 2px;
+      vertical-align: middle;
+    }
+
+    .checked {
+      background-color: var(--accent-color);
+      position: relative;
+    }
+
+    .checked::after {
+      content: '✓';
+      color: white;
+      font-size: 8px;
+      position: absolute;
+      top: -2px;
+      left: 1px;
+    }
+
+    /* Footer */
+    .footer {
+      font-size: 0.7rem;
+      color: #a0aec0;
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid var(--border-color);
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+    
+    <div class="header">
+      <div class="title-area">
+        <h1>品質検証・テスト完了チェックシート</h1>
+        <p>Webサイトの納品品質を保証するため、以下のチェック項目に沿って全機能の検証を行いました。</p>
+      </div>
+      <div class="logo-area">
+        <div class="logo">株式会社ジラーチ <span>QA</span></div>
+        <p style="font-size: 0.65rem; color: #718096; margin: 0;">https://jira-chi.net/</p>
+      </div>
+    </div>
+
+    <table class="info-table">
+      <tr>
+        <td class="label">案件名</td>
+        <td>【サンプル】〇〇様 LP/Webサイト制作プロジェクト</td>
+        <td class="label">検証完了日</td>
+        <td>2026年〇月〇日</td>
+      </tr>
+      <tr>
+        <td class="label">検証担当者</td>
+        <td>株式会社ジラーチ 品質保証チーム</td>
+        <td class="label">検証端末</td>
+        <td>iPhone 15 / Pixel 8 / iPad / MacBook / Windows PC</td>
+      </tr>
+    </table>
+
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th>カテゴリ</th>
+          <th>検証項目</th>
+          <th>検証内容の詳細</th>
+          <th class="center">PC</th>
+          <th class="center">iOS</th>
+          <th class="center">Android</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="category-cell" rowspan="3">フォーム挙動</td>
+          <td>入力必須・形式チェック</td>
+          <td>必須項目が空欄、またはメールアドレス形式不正時にエラーが出るか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>二重送信防止機能</td>
+          <td>送信ボタンの連続タップによる重複送信が防止されているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>完了画面遷移・通知</td>
+          <td>送信完了後にサンクスページへ正常遷移し、自動返信メールが届くか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td class="category-cell" rowspan="3">表示・レイアウト</td>
+          <td>レスポンシブ崩れ検証</td>
+          <td>主要ブラウザ幅（375px〜1920px）で文字崩れ、はみ出しがないか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>ボタン・領域タップ可否</td>
+          <td>スマホ表示時、ボタンのタップ可能エリアが適切に確保されているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>ダークモード配慮</td>
+          <td>OS側のダークモード設定時に、テキストが読めなくなる等の不具合がないか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td class="category-cell" rowspan="3">パフォーマンス</td>
+          <td>画像最適化（WebP）</td>
+          <td>掲載画像がWebP等に最適化され、ページ容量が軽量化されているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>表示速度スコア検証</td>
+          <td>Google PageSpeed Insightsで良好なパフォーマンススコアを維持しているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>遅延読み込み（Lazy）</td>
+          <td>不要なアセットの読み込みが非同期または遅延で行われているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td class="category-cell" rowspan="3">リンク・外部連携</td>
+          <td>デッドリンク検知</td>
+          <td>サイト内の全ての内部リンク、外部リンクで404エラーがないか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>セキュリティ（target）</td>
+          <td>外部リンクに rel="noopener noreferrer" が適切に付与されているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>SNS連携・OGP</td>
+          <td>LINEや各種SNSボタン、OGPタグが正しく設定・動作しているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td class="category-cell" rowspan="2">SEO基本設定</td>
+          <td>見出しタグ階層</td>
+          <td>h1タグが単一であり、h1〜h6の階層構造が検索エンジンに適しているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+        <tr>
+          <td>メタタグ整合性</td>
+          <td>title及びdescriptionが各ページ独自で適切に設定されているか</td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+          <td class="center"><span class="checkbox checked"></span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="font-size: 0.75rem; background-color: #f8fafc; border: 1px solid var(--border-color); padding: 12px; border-radius: 4px;">
+      <strong>【品質保証に関する補足説明】</strong><br>
+      株式会社ジラーチでは、上記の検証プロセスをクリアしたWebサイトのみを納品いたします。また、納品後1ヶ月間を「初期不具合無償サポート期間」とし、万が一のバグ検知にも即時対応しております。
+    </div>
+
+    <div class="footer">
+      © 株式会社ジラーチ - Jirachi Co., Ltd. All Rights Reserved.
+    </div>
+
+  </div>
+
+</body>
+</html>
