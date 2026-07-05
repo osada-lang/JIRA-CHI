@@ -13,6 +13,7 @@ export default defineConfig({
         faq: resolve(__dirname, 'faq.html'),
         contact: resolve(__dirname, 'contact.html'),
         privacy: resolve(__dirname, 'privacy.html'),
+        'software-testing': resolve(__dirname, 'software-testing.html'),
         'portfolio/autorace': resolve(__dirname, 'portfolio/autorace.html'),
         'portfolio/jirachi-site': resolve(__dirname, 'portfolio/jirachi-site.html'),
         'portfolio/leader-diagnosis': resolve(__dirname, 'portfolio/leader-diagnosis.html'),
