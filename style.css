@@ -136,7 +136,7 @@ body { background-color: var(--color-navy); }
 /* --- Design Tokens & Base --- */
 :root {
   --color-navy: #0d253d;       /* Stripe Deep Navy */
-  --color-red: #533afd;        /* Stripe Electric Indigo Accent */
+  --color-red: #E63946;        /* Original Brand Red Accent */
   --color-blue-light: #f6f9fc; /* Stripe Canvas Soft */
   --color-white: #FFFFFF;      /* Stripe Canvas */
   --color-text-main: #0d253d;  /* Stripe Ink */
