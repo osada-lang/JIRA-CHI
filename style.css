@@ -58,7 +58,7 @@
   left: 0;
   height: 100%;
   width: 30%;
-  background: #E63946; /* var(--color-red) */
+  background: var(--color-red); /* var(--color-red) */
   border-radius: 2px;
   animation: loading-progress 2s infinite ease-in-out;
 }
@@ -113,7 +113,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(11, 19, 43, 0.35);
+  background: rgba(13, 37, 61, 0.45);
 }
 
 /* --- Global Background & Glass --- */
@@ -135,12 +135,12 @@ body { background-color: var(--color-navy); }
 
 /* --- Design Tokens & Base --- */
 :root {
-  --color-navy: #0B132B;       /* 10% Main / Accents */
-  --color-red: #E63946;        /* Point Accent */
-  --color-blue-light: #D1F5FF; /* 30% Sub Color */
-  --color-white: #FFFFFF;      /* 60% Base Color */
-  --color-text-main: #0B132B;
-  --color-text-sub: #4A5568;
+  --color-navy: #0d253d;       /* Stripe Deep Navy */
+  --color-red: #533afd;        /* Stripe Electric Indigo Accent */
+  --color-blue-light: #f6f9fc; /* Stripe Canvas Soft */
+  --color-white: #FFFFFF;      /* Stripe Canvas */
+  --color-text-main: #0d253d;  /* Stripe Ink */
+  --color-text-sub: #64748d;   /* Stripe Ink Mute */
   --font-main: 'Mukta', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Noto Serif JP', serif;
   --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -177,10 +177,13 @@ img { max-width: 100%; height: auto; display: block; }
 .section-padding { padding: 120px 0; } 
 .section-padding:not(.hero) { background: transparent; }
 .main-content-wrapper { 
-  background: transparent; 
+  background: var(--color-white); 
   position: relative;
-  z-index: 1;
+  z-index: 5;
   display: flow-root;
+}
+.home-page .main-content-wrapper {
+  background: transparent;
 }
 
 /* --- Seaside Cafe Layout Components --- */
@@ -293,7 +296,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Full Width Shade Banner */
 .shade-banner {
-  background: var(--color-red);
+  background: #E63946 !important; /* Kept original Red */
   color: var(--color-white);
   padding: 60px 40px;
   width: 100%;
@@ -491,7 +494,8 @@ header.site-header {
 
 /* --- Sections & Cards --- */
 .campaign-banner {
-  background: var(--color-red); color: white; padding: 40px; text-align: center;
+  background: #E63946 !important; /* Kept original Red */
+  color: white; padding: 40px; text-align: center;
   margin-top: -80px; position: relative; z-index: 100; border-radius: 20px;
   box-shadow: 0 30px 60px rgba(230, 57, 70, 0.4);
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -499,7 +503,7 @@ header.site-header {
 }
 .campaign-banner:hover {
   transform: translateY(-85px) scale(1.02);
-  background-color: #f2505d;
+  background-color: #f2505d !important;
   box-shadow: 0 40px 80px rgba(230, 57, 70, 0.5);
 }
 
@@ -528,7 +532,7 @@ header.site-header {
 .drawer-nav a { font-size: 1.15rem; font-weight: 700; color: var(--color-navy); }
 .drawer-nav a:hover { color: var(--color-red); }
 .drawer-cta { margin-top: auto; display: flex; flex-direction: column; gap: 15px; }
-.btn-cta { width: 100%; padding: 18px; border-radius: 12px; text-align: center; font-weight: 700; font-size: 1.1rem; }
+.btn-cta { width: 100%; padding: 14px 28px; border-radius: 9999px; text-align: center; font-weight: 700; font-size: 1.1rem; }
 .btn-contact { background-color: var(--color-red); color: var(--color-white); }
 .btn-phone { background-color: var(--color-navy); color: var(--color-white); }
 
@@ -569,10 +573,11 @@ footer .logo-footer { height: 80px; width: auto; }
 
 /* Footer Custom Layout (Old HP style) */
 .site-footer-new {
-    background-color: #CFDCE1;
-    color: #333;
+    background-color: var(--color-blue-light);
+    color: var(--color-text-sub);
     padding: 60px 0 40px;
     text-align: center;
+    border-top: 1px solid #e3e8ee;
 }
 .footer-logo-center {
     height: 80px;
@@ -582,11 +587,11 @@ footer .logo-footer { height: 80px; width: auto; }
     font-size: 0.95rem;
     line-height: 1.8;
     margin-bottom: 40px;
-    color: #555;
+    color: var(--color-text-sub);
 }
 .footer-divider {
     border: none;
-    border-top: 1px solid #999;
+    border-top: 1px solid #e3e8ee;
     margin: 20px auto;
     max-width: 1000px;
 }
@@ -685,8 +690,8 @@ footer .logo-footer { height: 80px; width: auto; }
     gap: 12px;
     background: var(--color-red);
     color: white;
-    padding: 25px;
-    border-radius: 4px;
+    padding: 16px 32px;
+    border-radius: 9999px;
     font-weight: 700;
     font-size: 1.2rem;
     transition: var(--transition);
